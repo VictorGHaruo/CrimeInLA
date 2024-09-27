@@ -26,7 +26,7 @@ file = pd.read_csv("teste.csv", sep= ",")
 
 
 gender = file.groupby("Vict Sex")
-def ranking(file, gender, mode):
+def ranking(file, gender, mode, graphic_size):
     #frequencia de crimes para homem e mulher em ordem 
     m_crimes = gender.get_group("M").value_counts("Crm Cd")
     f_crimes = gender.get_group("F").value_counts("Crm Cd")
@@ -40,14 +40,16 @@ def ranking(file, gender, mode):
     f_list = f_crimes.index.to_list()
     
     if mode == "G":
-        diference = aux(g_list,m_crimes) - aux(g_list,f_crimes)
-        return g_list, diference.to_list()
+        graphic = order_data(g_list,m_crimes,f_crimes, graphic_size)
+        return graphic
     elif mode == "M":
-        diference = aux(m_list,m_crimes) - aux(m_list,f_crimes)
-        return m_list, diference.to_list()
+        graphic = order_data(m_list,m_crimes,f_crimes, graphic_size)
+        return graphic
+    elif mode == "F":
+        graphic = order_data(f_list,m_crimes,f_crimes, graphic_size)
+        return graphic
     else:
-        diference = aux(f_list,m_list) - aux(f_list,f_list)
-        return f_list, diference.to_list()
+        print(f"Mode{mode} doesnt exist")
 
 
 def aux(crime_list, freq_list):
@@ -59,6 +61,49 @@ def aux(crime_list, freq_list):
             num_crimes.append(int(freq_list[code]))
     return pd.Series(num_crimes)
 
-m,n = ranking(file,gender, "G")
+def order_data(crime_list, m_crimes, f_crimes, size):
+    diference = aux(crime_list,m_crimes) - aux(crime_list,f_crimes)
+    diference = diference.set_axis(crime_list)
+    diference = diference.sort_values(inplace=False)
+    diference = diference.iloc[np.r_[0:size/2, -size/2:0]]
+    return diference
+
+def plot_graph(graphic_data, graphic_name, gs:dict):
+
+
+
+    graphic_name = f"{graphic_name}.png"
+    plt.title("Teste")
+    plt.xlabel(gs["x_name"])
+    plt.ylabel(gs["y_name"])
+    plt.yticks(range(-30000, 30000, 5000))
+    graphic_data.plot.bar(color = "mediumturquoise", edgecolor = gs["edge_color"])
+    plt.savefig(graphic_name, dpi=gs["dpi"])
+
+
+
+
+m= ranking(file,gender, "G", 20)
+
+
+
+graph_settings = {"dpi": 1080,
+                  "x_name": "Crime Code",
+                  "y_name": "Quantities",
+                  "edge_color": "teal",
+                  "color": (0.2, # redness
+                            0.4, # greenness
+                            0.2, # blueness
+                            0.6 # transparency
+                            )
+                 
+                  
+                  
+                  
+                  }
+
+
+
+plot_graph(m, "teste", graph_settings)
 
 

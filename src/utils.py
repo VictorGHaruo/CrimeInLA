@@ -1,8 +1,8 @@
 import pandas as pd
 
-file_path = "../data/dataset.CSV"
+file_path = "../data/dataset.csv"
 
-file = pd.read_csv(file_path, sep=";")
+file = pd.read_csv(file_path, sep=",")
 
 
 """
@@ -22,9 +22,10 @@ file_name = "cleaned_dataset"
 
 def preprocessing(file, ctk:list[int], save_local:str, file_name:str):
     columns = file.columns.delete([ctk])
-    new = file.drop(columns,axis= 1)
-    save_local = save_local + "/" + file_name + ".csv"
 
-    new.to_csv(save_local, sep= ";", index= False)
+    new = file.drop(columns, axis= 1)
+    save_local = f"{save_local}/{file_name}.csv"
+
+    new.to_csv(save_local, sep= ",", index= False)
 
 preprocessing(file, ctk, save_local,file_name)

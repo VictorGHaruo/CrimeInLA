@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 file_path = "../data/Crime_Data_from_2020_to_Present.csv"
 
 file = pd.read_csv(file_path, sep=",")
@@ -22,6 +23,7 @@ def preprocessing(file, ctk:list[int], save_local:str, file_name:str):
     """
     
     columns = file.columns.delete([ctk])
+
     new = file.drop(columns,axis= 1)
     save_local = f"{save_local}/{file_name}.csv"
 

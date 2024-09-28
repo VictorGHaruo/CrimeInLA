@@ -59,43 +59,41 @@ def aux(crime_list, freq_list):
             num_crimes.append(0)
         else:
             num_crimes.append(int(freq_list[code]))
-    return pd.Series(num_crimes)
+    num_crimes = pd.Series(num_crimes)
+    num_crimes = num_crimes.set_axis(crime_list)
+    return num_crimes
 
 def order_data(crime_list, m_crimes, f_crimes, size):
     diference = aux(crime_list,m_crimes) - aux(crime_list,f_crimes)
-    diference = diference.set_axis(crime_list)
-    diference = diference.sort_values(inplace=False)
-    diference = diference.iloc[np.r_[0:size/2, -size/2:0]]
+    diference = diference.iloc[np.r_[0:size]]
     return diference
 
-def plot_graph(graphic_data, graphic_name, gs:dict):
-
-
-
-    graphic_name = f"{graphic_name}.png"
-    plt.title("Teste")
+def plot_graphic(graphic_data, graphic_name, gs: dict):
+    fig = plt.figure()
+    fig.patch.set_facecolor(gs["face_color"])
+    plt.title(graphic_name)
     plt.xlabel(gs["x_name"])
     plt.ylabel(gs["y_name"])
     plt.yticks(range(-30000, 30000, 5000))
-    graphic_data.plot.bar(color = "mediumturquoise", edgecolor = gs["edge_color"])
-    plt.savefig(graphic_name, dpi=gs["dpi"])
+    graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
+    plt.grid(color='gray', linestyle='--', linewidth=0.5)  # Adiciona uma grade mais visível 
+    #plt.show()
+    plt.savefig(f"{graphic_name}.png", dpi=gs["dpi"],bbox_inches='tight')
+    plt.close()
 
 
 
 
-m= ranking(file,gender, "G", 20)
 
 
-
-graph_settings = {"dpi": 1080,
+graph_settings = {"dpi": 1000,
                   "x_name": "Crime Code",
                   "y_name": "Quantities",
                   "edge_color": "teal",
-                  "color": (0.2, # redness
-                            0.4, # greenness
-                            0.2, # blueness
-                            0.6 # transparency
-                            )
+                  "face_color": "powderblue",
+                  "f_color": "mediumturquoise",
+                  "m_color": "cadetblue"
+
                  
                   
                   
@@ -103,7 +101,12 @@ graph_settings = {"dpi": 1080,
                   }
 
 
+general_analysis = ranking(file,gender, "G", 20)
+female_analysis = ranking(file,gender, "F", 20)
+men_analysis = ranking(file,gender, "M", 20)
 
-plot_graph(m, "teste", graph_settings)
 
 
+plot_graphic(general_analysis, "General Crimes", graph_settings)
+plot_graphic(men_analysis, "Men Crimes", graph_settings)
+plot_graphic(female_analysis, "Female Crimes", graph_settings)

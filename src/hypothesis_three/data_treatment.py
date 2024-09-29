@@ -73,6 +73,7 @@ def ranking(df: pd.DataFrame, gender_group: pd.DataFrame, mode: str, graphic_siz
     
     if mode == "G":
         graphic = order_data(g_list,m_crimes,f_crimes, graphic_size)
+
         return graphic
     elif mode == "M":
         graphic = order_data(m_list,m_crimes,f_crimes, graphic_size)
@@ -80,6 +81,14 @@ def ranking(df: pd.DataFrame, gender_group: pd.DataFrame, mode: str, graphic_siz
     elif mode == "F":
         graphic = order_data(f_list,m_crimes,f_crimes, graphic_size)
         return graphic
+    elif mode == "MC":
+        m_crimes = m_crimes.iloc[np.r_[0:int(graphic_size/2)]]
+        f_crimes = f_crimes.iloc[np.r_[0:int(graphic_size/2)]] * (-1)
+        f_crimes.sort_values(ascending=False, inplace=True)
+        graphic = pd.concat([m_crimes, f_crimes],axis= 0)
+
+        return graphic
+
     else:
         print(f"Mode{mode} doesn't exist")
 

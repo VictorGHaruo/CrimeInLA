@@ -2,10 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import geoplotlib
-from geoplotlib.utils import read_csv
-
-
+import geopandas as gpd
+import geodatasets as gds
+import json
 filepath = "reductdata.csv"
 
 Base = pd.read_csv(filepath)
@@ -72,12 +71,36 @@ def crime_heatmap(data):
 
     plt.savefig('crimes.png')
 
-geoplotlib.dot(df_Base)
-geoplotlib.show()
+#crime_heatmap(df_newdata)
 
+data = {
+    'name': ['Point A', 'Point B', 'Point C'],
+    'latitude': [34.0522, 34.07783, 34.07128],
+    'longitude': [-118.2437, -118.4179, -118.4060]
+}
+df = pd.DataFrame(data)
 
+df_coordinates = df_Base[['AREA NAME','LON','LAT']]
 
+# Load the GeoDataFrame with your map data
+LA_map = gpd.read_file('Stormwater_Capture_Master_Plan_(SCMP)_Priority_Infiltration_Areas.geojson')
 
+# Create a GeoDataFrame for your coordinates
+geometry = gpd.points_from_xy(df_coordinates.LON, df.columns.LAT)
+geo_df = gpd.GeoDataFrame(df_coordinates, geometry=geometry)
 
+# Set up the figure and axis
+fig, ax = plt.subplots(figsize=(12, 12))  # Consider a smaller figure size for better visibility
+ax.set_aspect('equal')
+
+# Plot the LA map and the points
+LA_map.plot(ax=ax, color='lightgrey', edgecolor='black')  # Customize the map color
+geo_df.plot(ax=ax, color='red', markersize=50, label='Coordinates')  # Customize points
+
+# Add a legend
+ax.legend()
+
+# Save the plot to a file
+plt.savefig("LA_map.jpg", dpi=300, bbox_inches='tight')
 
 

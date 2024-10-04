@@ -1,4 +1,5 @@
 import pandas as pd
+from matplotlib import pyplot as plt
 
 df = pd.read_csv("../../data/Crime_Data_from_2020_to_Present.csv")
 
@@ -43,7 +44,30 @@ crimes = {
     "desaparecimento" : [627, 940]
 }
 
-def categoria(cod, crimes: dict):
+def categoria(cod: int, crimes: dict) -> str:
+    
+    '''
+    Retorna o tipo de crime baseado no código 'Crm Cd'
+    
+    Parametros
+    ----------
+    cod: int
+        Código do crime
+    crimes: dict
+        Dicionario com a categorização dos crimes
+        
+    Exemplo
+    -------
+    >>> crimes = { 'assalto' : [1, 2], 'homicido' : [3, 4]}
+    >>> tipo_crime = categoria(2, crimes)
+    >>> print(tipo_crime)
+    assalto
+    >>> tipo_crime = categoria(4, crimes)
+    >>> print(tipo_crime)
+    homicido
+    
+    '''
+    
     for cate, nums in crimes.items():
         if cod in nums:
             return cate
@@ -54,3 +78,17 @@ df_cleaned = date_to_year(df, 'DATE OCC')
 df_cleaned = df_cleaned[['DATE OCC', 'Crm Cd']]
 df_cleaned['categoria'] = df_cleaned['Crm Cd'].apply(lambda x: categoria(x, crimes))
 df_cleaned.to_csv("../../data/hip_two.csv")
+
+df_year = df_cleaned.value_counts('DATE OCC')
+
+grupby_cat_df = df_cleaned.groupby('categoria')
+for i in df_cleaned["categoria"].unique():
+    df_plot = grupby_cat_df['DATE OCC'].value_counts()[i].sort_index()
+    df_mean = pd.Series()
+    for j in range(2020,2025):
+        df_mean[j] = df_plot[j] / df_year[j]
+    print(df_mean)
+    print(df_plot, i)
+    df_mean.plot.bar(title=i)
+    plt.savefig(f"meuplot{i}_mean.png", dpi = 300)
+    plt.clf()

@@ -1,37 +1,58 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 
-graph_settings = {"dpi": 1000,
-                  "y_name": "Quantities",
-                  "edge_color": "teal",
-                  "face_color": "powderblue",
-                  "f_color": "mediumturquoise",
-                  "m_color": "cadetblue"
-                  }
-
-def save_png(df: pd.DataFrame, x: str, y:str, path: str, gs: dict = graph_settings):
-    x_by_y = df.groupby(y)[x].value_counts().sort_index()
+def save_png(df: pd.DataFrame, by:str, comp: str, path: str):
+    '''
+    Função que cria o gráfico da quantidade de crimes para dois modos, por ano ou por crime.
+    Já fazendo o ano de 2024 como a média anual.
     
-    for i in df[y].unique():
+    Parametros
+    ----------
+    df: pd.DataFrame
+        Data frame cujo o numero de casos está
+    by; str
+        Nome da coluna do modo que vai ser serapado os gráficos
+    comp: str
+        Nome da coluna que vai ser comparada
+    path: str
+        Caminho para onde salvar a png
+    
+    Exemplo
+    -------
+    >>> df = np.DataFrame({'a': [2], 'b': [1]})
+    >>> save_png(df, 'a', 'b', './')
+    
+    '''
+    
+    comparison = df.groupby(by)[comp].value_counts().sort_index()
+    
+    if by == 'DATE OCC':
+        comparison[2024] = comparison[2024].apply(lambda x: (x*12)//8)
+    
+    for i in df[by].unique():
+        
+        if by == 'category':
+            n = comparison.loc[(i, 2024)]
+            comparison.loc[(i,2024)] = (n * 12)//8
         
         fig, ax = plt.subplots()
-        x_by_y[i].plot.bar(color = 'darkcyan')
+        comparison[i].plot.bar(color = 'darkcyan')
         
         fig.patch.set_facecolor('blueviolet')
         ax.set_facecolor('lightgray')
         
-        if y == 'DATE OCC':
+        if by == 'DATE OCC':
             plt.xlabel('Crimes')
         else:
-            plt.xlabel('Anos') 
+            plt.xlabel('Year') 
         plt.ylabel('Quantities')
-        n = x_by_y[i].max().astype(int)
+        n = comparison[i].max().astype(int)
         plt.yticks(range(0, n, n//8))
         
         plt.title(i)
         plt.grid(color='gray', linestyle='--', linewidth=0.5, alpha = 0.3)
         
-        plt.savefig(f'{path}/{i}.png', dpi= 300, bbox_inches='tight')
+        plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
         plt.close()
     
     

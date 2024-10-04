@@ -46,6 +46,27 @@ def category(cod: int, crimes: dict = crimes) -> str:
     return "Outros"
 
 def add_category (df: pd.DataFrame) -> pd.DataFrame:
+    
+    '''
+    Função responsavel por criar a coluna 'category', utilizando a função auxiliar category
+    para cada linha.
+    
+    Parametros
+    ----------
+    
+    df: pd.DataFrame
+        Dada frame com a coluna 'Crm Cd' cuja a função irá criar a nova coluna
+    
+    Exemplo
+    -------
+    >>> df = np.DataFrame({'Victm': ['A', 'B'], 'Crm Cd': [1, 745]})
+    >>> add_category(df)
+      Victm  Crm Cd                 category
+    0     A       1                   Outros
+    1     B     745  Posse de arma ou drogas
+
+    '''
+    
     df['category'] = df['Crm Cd'].apply(lambda x: category(x))
     return df
     

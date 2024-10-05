@@ -20,9 +20,9 @@ de Los Angeles.
 
 Hypothesis
 ----------
-* Gender & Crimes
-* Pandemia & Crimes
-* Location & Crimes
+* Gender & Crimes by Victor Iwamoto
+* Pandemia & Crimes by Eric Ribeiro
+* Location & Crimes by Lucas Menezes
 
 Challenges
 ----------

@@ -49,7 +49,8 @@ def ranking(df: pd.DataFrame, gender_group: pd.DataFrame, mode: str, graphic_siz
         the function will use the top graphic_size most frequently occurred 
         crimes in general and compare the differences in crimes committed 
         against women and men. For "F," it does the same but focuses on the 
-        most occurred crimes against women, and for "M," it focuses on those against men.
+        most occurred crimes against women, and for "M," it focuses on those against men. 
+        For "MC", it does the 10 most common crimes against women and men. 
     graphic_size : int
         How many lines will be used for comparison.
 

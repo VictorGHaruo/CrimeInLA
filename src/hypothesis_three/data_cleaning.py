@@ -37,7 +37,7 @@ def rm_X(victim_sex: str)->Union[str, float]:
 
     Returns
     -------
-    str or np.nan: np.nan for "X" or "H" or "-" and  return a str for anything else
+    str or np.nan: return a str for "F" and "M" and np.nan for anything else 
     
     Examples
     --------
@@ -55,6 +55,12 @@ def rm_X(victim_sex: str)->Union[str, float]:
         return np.nan
     else:
         return victim_sex
+
+
+    if victim_sex == "M" or victim_sex == "F":
+        return victim_sex
+    else:
+        return np.nan
 
 def remove_lines(df: pd.DataFrame):
     """

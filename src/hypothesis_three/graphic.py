@@ -24,6 +24,7 @@ License:
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 graph_settings = {"dpi": 1000,
                   "x_name": "Crime Code",
@@ -59,7 +60,23 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
     plt.xlabel(gs["x_name"])
     plt.ylabel(gs["y_name"])
     plt.yticks(range(-45000,45000, 5000))
-    graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
-    plt.grid(color='gray', linestyle='--', linewidth=0.5) 
-    plt.savefig(f"data/gender_and_crime/graphics/{graphic_name}.png", dpi=gs["dpi"],bbox_inches='tight')
+    try:
+        graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
+    except TypeError:
+        exit("Graphic Data isn't a pd.Series")
+    except ValueError:
+        exit("Can't plot graphic with this data type")
+    except Exception as error:
+        exit(f"inesperate error: {error}")
+    plt.grid(color='gray', linestyle='--', linewidth=0.5)
+
+    try:
+        path_save = f"data/gender_and_crime/graphics/{graphic_name}.png"
+        plt.savefig(path_save, dpi=gs["dpi"],bbox_inches='tight')
+    except FileNotFoundError:
+        #Criar diretório usar os
+        exit(f"The directory {path_save} doesn't exist.")
+    except PermissionError:
+        exit(f"The program doesn't have enough permission to save in the {path_save} folder")
+    
     plt.close()

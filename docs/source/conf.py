@@ -21,9 +21,6 @@ release = '2024'
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon', "sphinx_wagtail_theme"]
 napoleon_numpy_docstring = True
 
-
-
-
 templates_path = ['_templates']
 exclude_patterns = []
 

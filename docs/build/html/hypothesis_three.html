@@ -58,7 +58,7 @@
     <nav class="toc mt-3" aria-label="Main menu">
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="modules.html">hypothesis_three</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Crime &amp; Gender: Function Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
@@ -119,11 +119,44 @@
                         <main role="main" id="main">
     <section id="hypothesis-three-crime-gender">
 <h1>Hypothesis Three - Crime &amp; Gender<a class="headerlink" href="#hypothesis-three-crime-gender" title="Link to this heading">¶</a></h1>
-<p>Hypothesis</p>
-<p>A distribuição de crimes não é igual entre os gêneros, há crimes mais comuns
-dependendo do sexo</p>
-<section id="tabela-dos-crimes">
-<h2>Tabela dos Crimes<a class="headerlink" href="#tabela-dos-crimes" title="Link to this heading">¶</a></h2>
+<p>The crime distruibution isn’t equal between genders, certain crimes more common
+depending on the sex.</p>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Link to this heading">¶</a></h2>
+<p>For data analysis, three distinct graphs were generated to highlight the disparity in
+crime occurrences by gender, along with one graph that visualizes the highest occurrences
+based on gender.</p>
+<p>The data represented in the graphs reflect the difference in the number of crimes committed.
+A positive value indicates a higher frequency of crimes committed against men, while a negative
+value points to a higher occurrence against women.</p>
+<p>In the “GeneralCrimes” graph, the columns are ordered according to the crimes with the highest
+total occurrences, meaning those that were most reported in Los Angeles between 2020 and 2024,
+regardless of the victim’s gender. This graph serves as a baseline for comparing crime occurrences
+related to a specific gender.</p>
+<p>The “FemaleCrimes” and “MaleCrimes” graphs, on the other hand, have their columns organized according
+to the crimes most frequently committed against women and men, respectively. Additionally, there is the
+“MostCommon” graph, which visualizes the absolute values of crimes committed against both genders.</p>
+<p>For the analysis of crimes against women, the “FemaleCrimes” graph was used to select the five crimes with
+the highest occurrences among women. Although the crimes are ordered by their frequency among women, it’s
+important to note that some of these crimes occur more frequently among men. For example, crime 654 is the
+second most common among women, but its incidence is even higher among men, which is why it wasn’t included
+in the female crime analysis. A similar approach was taken for the male crime analysis.</p>
+<p>With these graphs, it’s possible to identify whether the high occurrence of a specific crime is associated
+with its prevalence across both genders or if it is targeted specifically at one. This distinction is crucial
+for structuring the hypothesis more precisely and for gaining a better understanding of the dynamics of
+gender-related crimes.</p>
+</section>
+<section id="columns-utilized">
+<h2>Columns Utilized<a class="headerlink" href="#columns-utilized" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Crm Cd (Crime Code)</p></li>
+<li><p>Vict Sex (Victim Sex)</p></li>
+</ul>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<section id="crime-table">
+<h3>Crime Table<a class="headerlink" href="#crime-table" title="Link to this heading">¶</a></h3>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Crime Code</p></th>
@@ -205,10 +238,58 @@ dependendo do sexo</p>
 </tr>
 </tbody>
 </table>
+<p>Gráfico i:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/FemaleCrimes.png"><img alt="_images/FemaleCrimes.png" src="_images/FemaleCrimes.png" style="width: 600px; height: 400px;" />
 </a>
 </figure>
+<p>Gráfico ii:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/MenCrimes.png"><img alt="_images/MenCrimes.png" src="_images/MenCrimes.png" style="width: 600px; height: 400px;" />
+</a>
+</figure>
+<p>Gráfico iii:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/GeneralCrimes.png"><img alt="_images/GeneralCrimes.png" src="_images/GeneralCrimes.png" style="width: 600px; height: 400px;" />
+</a>
+</figure>
+<p>Gráfico iv:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/MostCommon.png"><img alt="_images/MostCommon.png" src="_images/MostCommon.png" style="width: 600px; height: 400px;" />
+</a>
+</figure>
+</section>
+</section>
+<section id="analise">
+<h2>Análise<a class="headerlink" href="#analise" title="Link to this heading">¶</a></h2>
+<p>Female:</p>
+<p>626 (INTIMATE PARTNER - SIMPLE ASSAULT)
+354 (THEFT OF IDENTITY)
+236 (INTIMATE PARTNER - AGGRAVATED ASSAULT)
+901 (VIOLATION OF RESTRAINING ORDER)
+860 (BATTERY WITH SEXUAL CONTACT)</p>
+<p>Men:</p>
+<p>230 (ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT)
+310 (BURGLARY)
+210 (ROBBERY)
+330 (BURGLARY FROM VEHICLE)
+442 (SHOPLIFTING - PETTY THEFT ($950 &amp; UNDER))</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>Finally, the validity of the hypothesis is evident, given that crimes involving domestic violence in
+the analyses were clearly predominant with women as victims. The analysis reflects reality, as historically,
+society has developed under male dominance, where women assumed a submissive role. This shaped an ideology
+based on power relations, in which men objectified women as their property and, therefore, believed they had
+the right over women’s bodies. As a result, even today, abusive relationships are a reflection of this
+historical ideology, leading to an increase in crimes of violence against women. However, it is important to
+note that not all crimes involving women stem explicitly from the logic of male dominance. For instance,
+crime 354 (see chart iii) occurs frequently with both men and women.</p>
+<p>On the other hand, crimes against men arise more from a materialist logic, with a strong emphasis on theft and
+robbery, distinguishing them from the power dynamics present in violence against women. Nonetheless, physical
+violence is still present in these crimes, though it is not linked to control over the victim’s body and life as
+it is in the case of women. An example is the occurrence of crime 230, where a violent robbery occurs, but without
+a clear connection to gender.</p>
 </section>
 </section>
 
@@ -225,7 +306,14 @@ dependendo do sexo</p>
                             <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
                             <ul>
 <li><a class="reference internal" href="#">Hypothesis Three - Crime &amp; Gender</a><ul>
-<li><a class="reference internal" href="#tabela-dos-crimes">Tabela dos Crimes</a></li>
+<li><a class="reference internal" href="#method">Method</a></li>
+<li><a class="reference internal" href="#columns-utilized">Columns Utilized</a></li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#crime-table">Crime Table</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analise">Análise</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
 </ul>

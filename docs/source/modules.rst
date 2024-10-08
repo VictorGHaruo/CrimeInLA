@@ -10,7 +10,8 @@ Crime & Gender: Function Documentation
    graphic
    groups
    severity_lookup
-   severity_lookupsum_columns
+   severity
+   sum_columns
    plot_heatmap
    point_map
    geo_heatmap

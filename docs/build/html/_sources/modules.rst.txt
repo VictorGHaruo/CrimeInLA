@@ -8,3 +8,5 @@ Crime & Gender: Function Documentation
    data_cleaning
    data_treatment
    graphic
+   hip_one_graphics
+   hip_one_data_treatment

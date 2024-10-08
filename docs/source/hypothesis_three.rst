@@ -44,9 +44,8 @@ Columns Utilized
 Data
 ----
 
------------------
 Crime Table
------------------
+^^^^^^^^^^^^
 
 ==========  =========================================================
 Crime Code   Crime Description
@@ -79,7 +78,7 @@ Crime Code   Crime Description
 
 Gráfico i: 
 
-.. figure:: ../../data/gender_and_crime/graphics/FemaleCrimes.png
+.. figure:: ../../data/gender_and_crime/graphics/GeneralCrimes.png
    :width: 600px
    :height: 400px
    :align: center
@@ -93,7 +92,7 @@ Gráfico ii:
 
 Gráfico iii:
 
-.. figure:: ../../data/gender_and_crime/graphics/GeneralCrimes.png
+.. figure:: ../../data/gender_and_crime/graphics/FemaleCrimes.png
    :width: 600px
    :height: 400px
    :align: center
@@ -105,29 +104,33 @@ Gráfico iv:
    :height: 400px
    :align: center
 
-Análise
--------
+Analysis
+--------
 
-Female:
+Most Common Crimes Against Women:
 
+* 626 (INTIMATE PARTNER - SIMPLE ASSAULT)
+* 354 (THEFT OF IDENTITY)
+* 236 (INTIMATE PARTNER - AGGRAVATED ASSAULT)
+* 901 (VIOLATION OF RESTRAINING ORDER)
+* 860 (BATTERY WITH SEXUAL CONTACT)
 
-626 (INTIMATE PARTNER - SIMPLE ASSAULT)
-354 (THEFT OF IDENTITY)
-236 (INTIMATE PARTNER - AGGRAVATED ASSAULT)
-901 (VIOLATION OF RESTRAINING ORDER)
-860 (BATTERY WITH SEXUAL CONTACT)
+Most Common Crimes Against Men:
 
-Men:
+* 230 (ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT)
+* 310 (BURGLARY)
+* 210 (ROBBERY)
+* 330 (BURGLARY FROM VEHICLE)
+* 442 (SHOPLIFTING - PETTY THEFT ($950 & UNDER))
 
-230 (ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT)
-310 (BURGLARY)
-210 (ROBBERY)
-330 (BURGLARY FROM VEHICLE)
-442 (SHOPLIFTING - PETTY THEFT ($950 & UNDER))
+When comparing the data with the MostCommon chart, it becomes clear that crimes committed against men tend to 
+be more generalized. In other words, the most prevalent crimes against men also occur with a significant frequency 
+among women. However, the opposite is not true: crimes that predominantly affect women are not commonly seen among men. 
+Furthermore, the charts show that crimes against women are more targeted, with a notable emphasis on sexual offenses.
 
 
 Conclusion
------------
+----------
 
 Finally, the validity of the hypothesis is evident, given that crimes involving domestic violence in 
 the analyses were clearly predominant with women as victims. The analysis reflects reality, as historically, 
@@ -142,4 +145,5 @@ On the other hand, crimes against men arise more from a materialist logic, with 
 robbery, distinguishing them from the power dynamics present in violence against women. Nonetheless, physical 
 violence is still present in these crimes, though it is not linked to control over the victim’s body and life as 
 it is in the case of women. An example is the occurrence of crime 230, where a violent robbery occurs, but without 
-a clear connection to gender.
+a clear connection to gender and crimes against men are less targeted, it means that exists a stronger link between 
+women and crimes as saw in analysis.

@@ -24,15 +24,14 @@ License:
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 
 graph_settings = {"dpi": 1000,
                   "x_name": "Crime Code",
                   "y_name": "Quantities",
-                  "edge_color": "teal",
-                  "face_color": "powderblue",
-                  "f_color": "mediumturquoise",
-                  "m_color": "cadetblue"
+                  "edge_color": "#3BECCD",
+                  "face_color": "#1E182F",
+                  "f_color": "lightskyblue",
+                  "m_color": "mediumaquamarine"
                   }
 
 def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_settings):
@@ -55,11 +54,23 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
 
     """
     fig = plt.figure()
+
+    #Cor do Fundo
     fig.patch.set_facecolor(gs["face_color"])
-    plt.title(graphic_name)
-    plt.xlabel(gs["x_name"])
-    plt.ylabel(gs["y_name"])
+
+    #Font
+    plt.rcParams["font.family"] = "monospace"
+
+    #Eixos
+    plt.title(graphic_name, color = "linen")
+    plt.xlabel(gs["x_name"], color= "linen")
+    plt.ylabel(gs["y_name"], color= "linen")
     plt.yticks(range(-45000,45000, 5000))
+    
+    ax = plt.gca()
+    ax.set_facecolor('#1E182F')
+    ax.tick_params(axis="x", colors="linen")      # x tick labels
+    ax.tick_params(axis="y", colors="linen")
     try:
         graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
     except TypeError:

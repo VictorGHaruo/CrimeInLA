@@ -6,8 +6,6 @@ Functions
 ---------
 plot_heatmap(df, ylabel, title, gs)
     Plota um gráfico de calor e salva localmente no formato png.
-point_map(df,LAT, LON , maps, title, gs)
-    Plota uma mapa sobreposto por pontos em coordenadas específicas.
 geo_heatmap(df, intensity, title, gs)
     Plota um mapa de calor geográfico.
 plot_barh(data, ylabel, title, gs)
@@ -17,7 +15,6 @@ Examples
 --------
     >>> import hip_one_graphics as hg
     >>> hg.plot_heatmap(df, 'AREA NAME', 'heatmap')
-    >>> hg.ponit_map(df,'LAT','LON','Local_map.geosjon' , 'LA_map')
     >>> hg.geo_heatmap(df, 'crimes', 'La_map')
     >>> hg.plot_barh(df, df['name'], 'graph')
 
@@ -97,78 +94,12 @@ def plot_heatmap(df : pd.DataFrame ,ylabel : str ,title : str, gs : dict = heatm
     plt.close()
     
 
-point_config = {
-    'figsize': (12, 8),
-    'marker': 'o',      
-    'markersize': 10,   
-    'color': 'blue',     
-    'edgecolor': 'black',
-    'linewidth': 0.5,    
-    'alpha': 0.6,        
-    'legend': True,      
-    'categorical': True, 
-    }
-
-def point_map(df : pd.DataFrame ,LAT : str ,LON : str ,maps : str ,title : str, gs : dict = point_config):
-
-    """
-    Cria um mapa com sobreposição de pontos em coordenadas específicas
-
-    Parameters
-    ----------
-    df: pd.Dataframe
-        Dataframe que contém os dados do gráfico.
-    LAT : str
-        Nome da coluna de df que contém os dados da latitude dos pontos.
-    LON : str
-        None da coluna de df que contém os dado da longitude dos pontos . 
-    maps : str
-        Endereço do arquivo que contém os dados do mapa.
-    title : str
-        Título do gráfico.
-    gs : dict
-        Dicionário com configurações básicas para os pontos.
-    Returns
-    -------
-    None
-        This function generates a .png file with the graphic.
-    """
-    
-    df_coordinates = df[[LON,LAT]].copy()
-
-    df_coordinates = df_coordinates[(df_coordinates[LON] != 0) & (df_coordinates[LAT] != 0)]
-
-    map = gpd.read_file(maps)
-
-    geometry = gpd.points_from_xy(df_coordinates[LON], df_coordinates[LAT])
-    geo_df = gpd.GeoDataFrame(df_coordinates ,geometry= geometry )
-
-    fig, ax = plt.subplots(figsize=gs.get('figsize', (12, 8)))
-    ax.set_aspect('equal')
-
-    map.plot(ax=ax, color='lightgrey', edgecolor='black') 
-
-    geo_df.plot(
-        ax=ax, 
-        marker=gs.get('marker', 'o'), 
-        color=gs.get('color', 'blue'), 
-        markersize=gs.get('markersize', 10), 
-        edgecolor=gs.get('edgecolor', 'black'), 
-        linewidth=gs.get('linewidth', 0.5), 
-        alpha=gs.get('alpha', 0.6),
-        label='Coordinates'
-    )
-
-    plt.title(title)
-    plt.savefig(f"{title}.png", dpi=300, bbox_inches='tight')
-    plt.close()
-
 graph_settings = {'figsize': (10, 8),                
     'cmap': 'YlOrRd',                  
     'column': 'intensidade',           
     'legend': True,                    
     'alpha': 0.6,                      
-    'edgecolor': 'none',               
+    'edgecolor': 'black',               
     'linewidth': 0.5,                  
     'scheme': 'quantiles'}
           
@@ -207,7 +138,8 @@ def geo_heatmap(df: gpd.GeoDataFrame, intensity: str, title: str, gs: dict = gra
         ax=ax,                                             
     )
 
-    plt.title(title)                      
+    plt.title(title)         
+    plt.show()             
     plt.savefig(f"{title}.png")           
     plt.close()
 

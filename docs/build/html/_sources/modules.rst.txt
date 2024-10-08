@@ -8,3 +8,10 @@ Crime & Gender: Function Documentation
    data_cleaning
    data_treatment
    graphic
+   groups
+   severity_lookup
+   severity_lookupsum_columns
+   plot_heatmap
+   point_map
+   geo_heatmap
+   plot_barh

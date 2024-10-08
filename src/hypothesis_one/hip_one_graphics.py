@@ -10,7 +10,7 @@ point_map(df,LAT, LON , maps, title, gs)
     Plota uma mapa sobreposto por pontos em coordenadas específicas.
 geo_heatmap(df, intensity, title, gs)
     Plota um mapa de calor geográfico.
-plot_barh(data, xlabel, title, gs)
+plot_barh(data, ylabel, title, gs)
     Plota um gráfico de barras horizontal.
 
 Examples
@@ -19,6 +19,7 @@ Examples
     >>> hg.plot_heatmap(df, 'AREA NAME', 'heatmap')
     >>> hg.ponit_map(df,'LAT','LON','Local_map.geosjon' , 'LA_map')
     >>> hg.geo_heatmap(df, 'crimes', 'La_map')
+    >>> hg.plot_barh(df, df['name'], 'graph')
 
 Author
 ------
@@ -236,7 +237,7 @@ barh_settings = {
     'label_color': 'darkblue'     
 }
 
-def plot_barh(data: pd.Series, xlabel: pd.Series, title: str, gs: dict = barh_settings):
+def plot_barh(data: pd.Series, ylabel: pd.Series, title: str, gs: dict = barh_settings):
     """
     Função para plotar gráfico de barras horizontal com configurações personalizadas.
 
@@ -255,7 +256,7 @@ def plot_barh(data: pd.Series, xlabel: pd.Series, title: str, gs: dict = barh_se
     fig, ax = plt.subplots(figsize=gs.get('figsize', (10, 7)))
 
     ax.barh(
-        xlabel, 
+        ylabel, 
         data, 
         color=gs.get('color', 'maroon'), 
         edgecolor=gs.get('edgecolor', 'black'), 

@@ -1,3 +1,7 @@
+'''
+Main doc
+'''
+
 import pandas as pd
 import hypothesis_two.categorizer as ctg
 import hypothesis_two.ploter as ptr

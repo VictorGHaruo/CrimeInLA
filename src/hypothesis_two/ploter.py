@@ -42,17 +42,19 @@ def png_year(df: pd.DataFrame, path: str):
         fig, ax = plt.subplots()
         comparison[i].plot.barh(color = 'darkcyan')
         
-        fig.patch.set_facecolor('blueviolet')
-        ax.set_facecolor('lightgray')
+        fig.patch.set_facecolor('#1E182F')
+        ax.set_facecolor('#1E182F')
+        ax.tick_params(axis="x", colors="linen")
+        ax.tick_params(axis="y", colors="linen")
 
-        plt.ylabel('Crimes')
-        plt.xlabel('Quantities')
-        n = comparison[i].max().astype(int)
-        if n != 0 and n//8 > 0 :
-            plt.xticks(range(0, n, n//8))
+        plt.ylabel('Crimes', color= "linen")
+        plt.xlabel('Quantities', color= "linen")
+        # n = comparison[i].max().astype(int)
+        # if n != 0 and n//8 > 0 :
+        #     plt.xticks(range(0, n, n//8))
         
-        plt.title(i)
-        plt.grid(color='gray', linestyle='--', linewidth=0.5, alpha = 0.3)
+        plt.title(i, color = "linen")
+        plt.grid(color='gray', linestyle='--', linewidth=0.5)
         
         plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
         plt.close()
@@ -80,17 +82,19 @@ def png_category(df: pd.DataFrame, path: str):
         fig, ax = plt.subplots()
         comparison[i].plot.bar(color = 'darkcyan')
         
-        fig.patch.set_facecolor('blueviolet')
-        ax.set_facecolor('lightgray')
+        fig.patch.set_facecolor('#1E182F')
+        ax.set_facecolor('#1E182F')
+        ax.tick_params(axis="x", colors="linen")
+        ax.tick_params(axis="y", colors="linen")
 
-        plt.xlabel('Year')
+        plt.xlabel('Year', color= "linen")
         plt.xticks(rotation=0)
-        plt.ylabel('Quantities')
-        n = comparison[i].max().astype(int)
-        plt.yticks(range(0, n, n//8))
+        plt.ylabel('Quantities', color= "linen")
+        # n = comparison[i].max().astype(int)
+        # plt.yticks(range(0, n, n//8))
         
-        plt.title(i)
-        plt.grid(color='gray', linestyle='--', linewidth=0.5, alpha = 0.3)
+        plt.title(i, color = "linen")
+        plt.grid(color='gray', linestyle='--', linewidth=0.5)
         
         plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
         plt.close()

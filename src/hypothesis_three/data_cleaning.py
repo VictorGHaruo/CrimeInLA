@@ -59,7 +59,6 @@ def remove_lines(df: pd.DataFrame, file_path: str):
     removes all rows with np.nan in the "Vict Sex" column, and creates 
     a file named 'final_dataset.csv' containing the cleaned data.
 
-
     Parameters
     ----------
     df : pd.DataFrame

@@ -25,6 +25,7 @@ class TestDataCleaning(unittest.TestCase):
             'Vict Sex': ["M", "F", "M", "F"],
             "Crm Cd" : [510, 624, 131, 901]
         })
+
         self.rm_x_df = pd.DataFrame({
             "Vict Sex": ["M", "F", np.nan, np.nan, np.nan, "M", "F"],
             "Crm Cd" : [510, 624, 626, 120, 130, 131, 901]
@@ -59,8 +60,7 @@ class TestDataCleaning(unittest.TestCase):
 
         for sex_number in range(self.df.shape[0]):
             self.df.loc[sex_number, "Vict Sex"] = dc.rm_X(self.df["Vict Sex"][sex_number])
-        assert_frame_equal(self.df, self.rm_x_df)
-            
+        assert_frame_equal(self.df, self.rm_x_df)        
 
 if __name__ == '__main__':
     unittest.main()

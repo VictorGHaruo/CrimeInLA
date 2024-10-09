@@ -24,11 +24,12 @@ License:
 
 import pandas as pd
 import numpy as np
+import os
 from typing import Union
 
 def rm_X(victim_sex: str)->Union[str, float]:
     """
-    Auxiliary function that converts "X" to np.nan. 
+    Auxiliary function that converts everything different from "F" or "M" to np.nan. 
 
     Parameters
     ----------
@@ -47,24 +48,14 @@ def rm_X(victim_sex: str)->Union[str, float]:
     nan
     """
 
-    if victim_sex == "X":
-        return np.nan
-    elif victim_sex == "H":
-        return np.nan
-    elif victim_sex == "-":
-        return np.nan
-    else:
-        return victim_sex
-
-
     if victim_sex == "M" or victim_sex == "F":
         return victim_sex
     else:
         return np.nan
 
-def remove_lines(df: pd.DataFrame):
+def remove_lines(df: pd.DataFrame, file_path: str):
     """
-    Transforms "X", "H" and "-" values in the "Vict Sex" column into empty cells, 
+    Transforms every value different of "F" or "M" in the "Vict Sex" column into empty cells, 
     removes all rows with np.nan in the "Vict Sex" column, and creates 
     a file named 'final_dataset.csv' containing the cleaned data.
 
@@ -73,6 +64,8 @@ def remove_lines(df: pd.DataFrame):
     ----------
     df : pd.DataFrame
         DataFrame to be cleaned.
+    file_path : str
+        Path to save the file
 
     Returns
     -------
@@ -80,6 +73,13 @@ def remove_lines(df: pd.DataFrame):
         Generate a .csv file.
 
     """
+
     df["Vict Sex"] = df["Vict Sex"].apply(lambda victim_sex: rm_X(victim_sex))
     df = df.dropna()
-    df.to_csv("data/final_dataset.csv", sep= ",", index= False)
+    
+    directory = os.path.dirname(file_path)
+
+    if os.path.exists(directory) == False:
+        raise FileNotFoundError()
+
+    df.to_csv(file_path, sep= ",", index= False)

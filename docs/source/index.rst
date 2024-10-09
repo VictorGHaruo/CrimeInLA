@@ -52,9 +52,9 @@ References
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
    
-   modules
-   modules_h2
+   documentation
+   hypothesis_two
    hypothesis_three

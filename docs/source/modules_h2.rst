@@ -1,5 +1,5 @@
-Pandemic
-========
+Hypothesis Two : Function Documentation
+=======================================
 
 .. toctree::
    :maxdepth: 3

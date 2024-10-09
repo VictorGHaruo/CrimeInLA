@@ -38,9 +38,9 @@ def png_year(df: pd.DataFrame, path: str):
     try:
         comparison = df.groupby('year')['category'].value_counts().sort_index(ascending=False)
     except KeyError:
-        exit('png_year : DataFrame don\'t have the columns \"year\" and/or \"category\"' )
+        raise KeyError('png_year : DataFrame don\'t have the columns \"year\" and/or \"category\"' )
     except AttributeError:
-        exit("png_year : The passed argument \"df\" is not a dataframe")
+        raise AttributeError("png_year : The passed argument \"df\" is not a dataframe")
     
     # Because 2024 has just 8 months of data
     comparison[2024] = comparison[2024].apply(lambda x: (x//8)*12)
@@ -52,7 +52,7 @@ def png_year(df: pd.DataFrame, path: str):
         try:
             comparison[i].plot.barh(color = 'darkcyan')
         except KeyError:
-            exit(f'png_year : The column \'year\' has some np.nan')
+            raise KeyError(f'png_year : The column \'year\' has some np.nan')
             
         fig.patch.set_facecolor('#1E182F')
         ax.set_facecolor('#1E182F')
@@ -65,9 +65,9 @@ def png_year(df: pd.DataFrame, path: str):
         plt.grid(color='gray', linestyle='--', linewidth=0.5)
         
         try:
-            plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
+            plt.savefig(f'{path}{i}.png', dpi= 600, bbox_inches='tight')
         except FileNotFoundError:
-            exit(f'png_year : The path isn\'s corret, file not found')
+            raise FileNotFoundError(f'png_year : The path isn\'s corret, file not found')
             
         plt.close()
         
@@ -90,9 +90,9 @@ def png_category(df: pd.DataFrame, path: str):
     try:
         comparison = df.groupby('category')['year'].value_counts().sort_index()
     except KeyError:
-        exit('png_category : DataFrame don\'t have the columns \"year\" and/or \"category\"' )
+        raise KeyError('png_category : DataFrame don\'t have the columns \"year\" and/or \"category\"' )
     except AttributeError:
-        exit("png_category : The passed argument \"df\" is not a dataframe")
+        raise AttributeError("png_category : The passed argument \"df\" is not a dataframe")
     
     # Because 2024 has just 8 months of completed data
     for i in df['category'].unique():
@@ -114,8 +114,14 @@ def png_category(df: pd.DataFrame, path: str):
         plt.grid(color='gray', linestyle='--', linewidth=0.5)
         
         try:
-            plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
+            # If the category is compost name, need to put to name1_name2.png
+            if len(i.split()) == 1:
+                plt.savefig(f'{path}{i}.png', dpi= 600, bbox_inches='tight')
+            else:
+                str = i.split()
+                name = '_'.join(str)
+                plt.savefig(f'{path}{name}.png', dpi= 600, bbox_inches='tight')
         except FileNotFoundError:
-            exit(f'png_category : The path isn\'s corret, file not found')
+            raise FileNotFoundError(f'png_category : The path isn\'s corret, file not found')
         
         plt.close()

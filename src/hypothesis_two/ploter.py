@@ -1,50 +1,90 @@
+'''
+Module responsible for generating PNGs of crimes and years.
+
+Functions
+---------
+png_year(df, path)
+    Function that creates graphs for each year.
+png_category(df, path)
+    Function that creates graphs for each category.
+
+Example
+-------
+>>> import ploter as pl
+>>> pl.png_year(df, './')
+>>> pl.png_category(df, '../../folder/')
+
+'''
+
 import pandas as pd
 from matplotlib import pyplot as plt
 
-def save_png(df: pd.DataFrame, by:str, comp: str, path: str):
+def png_year(df: pd.DataFrame, path: str):
     '''
-    Função que cria o gráfico da quantidade de crimes para dois modos, por ano ou por crime.
-    Já fazendo o ano de 2024 como a média anual.
+    Function that creates graphs for each year.
     
-    Parametros
+    Parameters
     ----------
     df: pd.DataFrame
-        Data frame cujo o numero de casos está
-    by; str
-        Nome da coluna do modo que vai ser serapado os gráficos
-    comp: str
-        Nome da coluna que vai ser comparada
+        DataFrame with 'year' and 'category' columns.
     path: str
-        Caminho para onde salvar a png
+        Path where the PNG files will be saved.
     
-    Exemplo
+    Example
     -------
-    >>> df = np.DataFrame({'a': [2], 'b': [1]})
-    >>> save_png(df, 'a', 'b', './')
-    
+    >>> df = pd.DataFrame({'year': [2, 1], 'category': [1, 2]})
+    >>> png_year(df, './')
     '''
     
-    comparison = df.groupby(by)[comp].value_counts().sort_index()
+    comparison = df.groupby('year')['category'].value_counts().sort_index(ascending=False)
     
-    if by == 'DATE OCC':
-        comparison[2024] = comparison[2024].apply(lambda x: (x*12)//8)
+    for i in df['year'].unique():
+        fig, ax = plt.subplots()
+        comparison[i].plot.barh(color = 'darkcyan')
+        
+        fig.patch.set_facecolor('blueviolet')
+        ax.set_facecolor('lightgray')
+
+        plt.ylabel('Crimes')
+        plt.xlabel('Quantities')
+        n = comparison[i].max().astype(int)
+        if n != 0 and n//8 > 0 :
+            plt.xticks(range(0, n, n//8))
+        
+        plt.title(i)
+        plt.grid(color='gray', linestyle='--', linewidth=0.5, alpha = 0.3)
+        
+        plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
+        plt.close()
+        
+def png_category(df: pd.DataFrame, path: str):
+    '''
+    Function that creates graphs for each category.
     
-    for i in df[by].unique():
-        
-        if by == 'category':
-            n = comparison.loc[(i, 2024)]
-            comparison.loc[(i,2024)] = (n * 12)//8
-        
+    Parameters
+    ----------
+    df: pd.DataFrame
+        DataFrame with 'year' and 'category' columns.
+    path: str
+        Path where the PNG files will be saved.
+    
+    Example
+    -------
+    >>> df = pd.DataFrame({'year': [2, 1], 'category': [1, 2]})
+    >>> png_category(df, './')
+    '''
+    
+    comparison = df.groupby('category')['year'].value_counts().sort_index()
+    
+    for i in df['category'].unique():
         fig, ax = plt.subplots()
         comparison[i].plot.bar(color = 'darkcyan')
         
         fig.patch.set_facecolor('blueviolet')
         ax.set_facecolor('lightgray')
-        
-        if by == 'DATE OCC':
-            plt.xlabel('Crimes')
-        else:
-            plt.xlabel('Year') 
+
+        plt.xlabel('Year')
+        plt.xticks(rotation=0)
         plt.ylabel('Quantities')
         n = comparison[i].max().astype(int)
         plt.yticks(range(0, n, n//8))
@@ -54,6 +94,3 @@ def save_png(df: pd.DataFrame, by:str, comp: str, path: str):
         
         plt.savefig(f'{path}{i}.png', dpi= 300, bbox_inches='tight')
         plt.close()
-    
-    
-    

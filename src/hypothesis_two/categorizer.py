@@ -54,8 +54,8 @@ def date_to_year(df: pd.DataFrame, column: str) -> pd.DataFrame:
     '''
     
     df_new = df.copy()
-    df_new['day'] = df_new[column].str.split('[ /]').str[0].astype(int)
-    df_new['month'] = df_new[column].str.split('[ /]').str[1].astype(int)
+    df_new['day'] = df_new[column].str.split('[ /]').str[1].astype(int)
+    df_new['month'] = df_new[column].str.split('[ /]').str[0].astype(int)
     df_new['year'] = df_new[column].str.split('[ /]').str[2].astype(int)
     df_new = df_new.drop(column, axis=1)
     return df_new

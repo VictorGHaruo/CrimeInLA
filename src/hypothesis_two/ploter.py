@@ -42,6 +42,9 @@ def png_year(df: pd.DataFrame, path: str):
     except AttributeError:
         exit("png_year : The passed argument \"df\" is not a dataframe")
     
+    # Because 2024 has just 8 months of data
+    comparison[2024] = comparison[2024].apply(lambda x: (x//8)*12)
+    
     for i in df['year'].dropna().unique():
         
         fig, ax = plt.subplots()
@@ -90,6 +93,10 @@ def png_category(df: pd.DataFrame, path: str):
         exit('png_category : DataFrame don\'t have the columns \"year\" and/or \"category\"' )
     except AttributeError:
         exit("png_category : The passed argument \"df\" is not a dataframe")
+    
+    # Because 2024 has just 8 months of completed data
+    for i in df['category'].unique():
+        comparison.loc[i, 2024] = (comparison.loc[i, 2024] // 8) * 12
     
     for i in df['category'].dropna().unique():
         fig, ax = plt.subplots()

@@ -3,13 +3,9 @@ This module is responsible for extra data cleaning for hypothesis 2,
 which involves transforming the date into a year and adding a category 
 for each crime.
 
-Attributes
-----------
-Crimes : dict
-    Standard categorization of crimes.
-
 Functions
 ---------
+
 date_to_year(df, column)
     Takes the column of the dataframe in the format "XX/XX/XXXX 00:00:00 XM" 
     and returns only the year.
@@ -22,6 +18,7 @@ category(df)
 
 Examples
 --------
+
 >>> import categorizer as ctg
 >>> df_dated = ctg.date_to_year(df, 'Date')
 >>> crime_type = ctg.aux_category(2, crimes)
@@ -34,26 +31,26 @@ def date_to_year(df: pd.DataFrame, column: str) -> pd.DataFrame:
     '''
     Extracts the day, month, and year from a column in the format "dd/mm/yyyy 00:00:00 XM".
         
-        Parameters
-        ----------
-        df: pd.DataFrame
-            DataFrame with a column in the format "dd/mm/yyyy 00:00:00 XM".
-        column: str
-            Name of the column with this format.
-        
-        Returns
-        -------
-        pd.DataFrame
-            DataFrame without the passed column, but with 3 new ones: 'day', 'month', and 'year'.
-        
-        Example
-        -------
-        >>> df = pd.DataFrame({'Date': ['26/11/2004 08:00:00 PM', '10/10/2024 07:00:00 AM']})
-        >>> df_clean = date_to_year(df, 'Date')
-        >>> print(df_clean)
-            day  month  year
-        0   26      11  2004
-        1   10      10  2024
+    Parameters
+    ----------
+    df: pd.DataFrame
+        DataFrame with a column in the format "dd/mm/yyyy 00:00:00 XM".
+    column: str
+        Name of the column with this format.
+    
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame without the passed column, but with 3 new ones: 'day', 'month', and 'year'.
+    
+    Example
+    -------
+    >>> df = pd.DataFrame({'Date': ['26/11/2004 08:00:00 PM', '10/10/2024 07:00:00 AM']})
+    >>> df_clean = date_to_year(df, 'Date')
+    >>> print(df_clean)
+        day  month  year
+    0   26      11  2004
+    1   10      10  2024
     '''
     
     df_new = df.copy()
@@ -115,7 +112,7 @@ def aux_category(cod: int, crimes: dict = crimes) -> str:
 
 def category (df: pd.DataFrame, column: str) -> pd.DataFrame:
     '''
-     Function responsible for creating the 'category' column, using the auxiliary function 
+    Function responsible for creating the 'category' column, using the auxiliary function 
     aux_category for each row.
     
     Parameters

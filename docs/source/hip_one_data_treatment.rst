@@ -1,7 +1,7 @@
-hip\_one\_data\_treatment module
-================================
+data_treatment_h1 module
+========================
 
-.. automodule:: src.hypothesis_one.hip_one_data_treatment
+.. automodule:: src.hypothesis_one.data_treatment_h1
    :members:
    :undoc-members:
    :show-inheritance:

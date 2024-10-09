@@ -20,6 +20,7 @@ class TestDataTreatment(unittest.TestCase):
                                  510 : 7,
                                  901 : 8
                                  })
+        
         self.df_two = pd.Series({626 : 13,
                                  510 : 4,
                                  901 : 7,
@@ -45,20 +46,24 @@ class TestDataTreatment(unittest.TestCase):
                                             130 : 0,
                                             901 : 2,
                                             626 : -1
-
-        })
+                                            })
+        
         self.result_ranking_F = pd.Series({ 510 : -3,
                                             130 : 0,
                                             626 : -1,
                                             901 : 2
-
-        })
+                                            })
+        
         self.result_ranking_M = pd.Series({ 901 : 2,
                                             130 : 0,
                                             510 : -3,
                                             626 : -1
-
-        })
+                                            })
+        
+        self.result_ranking_MC = pd.Series({ 
+                                             901 : 3,
+                                             510 : -4 
+                                            })
 
     def test_aux(self):
         # Test of fuction "aux"
@@ -90,6 +95,14 @@ class TestDataTreatment(unittest.TestCase):
         df = pd.read_csv(file_path, sep= ",")
         gender = df.groupby("Vict Sex")
         assert_series_equal(dc.ranking(df, gender, "M", 4), self.result_ranking_M)
+    
+    def test_ranking_MC(self):
+        # Test of fuction "ranking" with mode= "MC"
+
+        df = pd.read_csv(file_path, sep= ",")
+        gender = df.groupby("Vict Sex")
+        assert_series_equal(dc.ranking(df, gender, "MC", 2), self.result_ranking_MC, check_names= False)
 
 if __name__ == '__main__':
     unittest.main()
+    

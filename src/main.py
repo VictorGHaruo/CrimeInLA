@@ -22,7 +22,6 @@ License:
 """
 
 import pandas as pd
-# main.py
 import src.hypothesis_three.data_cleaning as dc
 import src.hypothesis_three.data_treatment as dt
 import src.hypothesis_three.graphic as gp
@@ -41,17 +40,17 @@ def main ():
 
     gender = new_df.groupby("Vict Sex")
     print (new_df.shape)
-    #Data Treatment
+    # Data Treatment
     general_analysis = dt.ranking(new_df,gender, "G", 20)
-    # female_analysis = dt.ranking(new_df,gender, "F", 20)
-    # men_analysis = dt.ranking(new_df,gender, "M", 20)
-    # mc_analysis = dt.ranking(new_df,gender, "MC", 20)
+    female_analysis = dt.ranking(new_df,gender, "F", 20)
+    men_analysis = dt.ranking(new_df,gender, "M", 20)
+    mc_analysis = dt.ranking(new_df,gender, "MC", 20)
 
-    #Plot graphic
+    # Plot graphic
     gp.plot_graphic(general_analysis, "GeneralCrimes")
-    # gp.plot_graphic(men_analysis, "MenCrimes")
-    # gp.plot_graphic(female_analysis, "FemaleCrimes")
-    # gp.plot_graphic(mc_analysis, "MostCommon")
+    gp.plot_graphic(men_analysis, "MenCrimes")
+    gp.plot_graphic(female_analysis, "FemaleCrimes")
+    gp.plot_graphic(mc_analysis, "MostCommon")
 
 if __name__ == "__main__":
     main()

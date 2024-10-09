@@ -55,22 +55,24 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
     """
     fig = plt.figure()
 
-    #Background Color
+    # Background Color
     fig.patch.set_facecolor(gs["face_color"])
 
-    #Font
+    # Font
     plt.rcParams["font.family"] = "monospace"
 
-    #Axis adjust
+    # Axis adjust - names
     plt.title(graphic_name, color = "linen")
     plt.xlabel(gs["x_name"], color= "linen")
     plt.ylabel(gs["y_name"], color= "linen")
     plt.yticks(range(-45000,45000, 5000))
     
+    # Axis colors
     ax = plt.gca()
     ax.set_facecolor('#1E182F')
-    ax.tick_params(axis="x", colors="linen")      # x tick labels
+    ax.tick_params(axis="x", colors="linen")     
     ax.tick_params(axis="y", colors="linen")
+
     try:
         graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
     except TypeError:

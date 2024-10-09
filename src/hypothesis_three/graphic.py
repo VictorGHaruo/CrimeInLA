@@ -55,13 +55,13 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
     """
     fig = plt.figure()
 
-    #Cor do Fundo
+    #Background Color
     fig.patch.set_facecolor(gs["face_color"])
 
     #Font
     plt.rcParams["font.family"] = "monospace"
 
-    #Eixos
+    #Axis adjust
     plt.title(graphic_name, color = "linen")
     plt.xlabel(gs["x_name"], color= "linen")
     plt.ylabel(gs["y_name"], color= "linen")
@@ -85,7 +85,6 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
         path_save = f"data/gender_and_crime/graphics/{graphic_name}.png"
         plt.savefig(path_save, dpi=gs["dpi"],bbox_inches='tight')
     except FileNotFoundError:
-        #Criar diretório usar os
         exit(f"The directory {path_save} doesn't exist.")
     except PermissionError:
         exit(f"The program doesn't have enough permission to save in the {path_save} folder")

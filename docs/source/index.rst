@@ -123,6 +123,8 @@ References
    :maxdepth: 2
    :caption: Contents:
    
-   modules
+   documentation
+   hypothesis_one
+   hypothesis_two
    hypothesis_three
 

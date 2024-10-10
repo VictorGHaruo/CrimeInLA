@@ -100,7 +100,7 @@ proper execution of the project.
 
 How to Run
 ----------
-
+0. At the end of README it has References, click on "Dataset Download", and the download starts. Also, in and "Shape Map LAPD Limits dataset", download the shapefile. Now put the downloaded .csv and .zip files in `data` folder.
 1. At folder root `CrimeInLA` run `pip install -r requirements.txt` to install the dependencies.
 2. Still in the folder root `CrimeInLA` run `python3 -m src.main`
 3. After ran, do `cd docs && make html` 
@@ -110,6 +110,8 @@ How to Run
     $ python3 -m src.main
     $ cd docs && make html
 ***
+
+4. To access html page, go to `docs/build/html/index.html`
 
 What Each One Have Done
 ------------------------
@@ -124,5 +126,6 @@ the project modules and in the development of Sphinx documentation.
 
 References
 ----------
-* `Dataset Download <https://catalog.data.gov/dataset/crime-data-from-2020-to-present>`_
+* `Dataset Download <https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessTyhttps://catalog.data.gov/dataset/crime-data-from-2020-to-presentpe=DOWNLOAD>`_
 * `Column Description <https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8/about_data>`_
+* `Shape Map LAPD Limits dataset <https://geohub.lacity.org/datasets/031d488e158144d0b3aecaa9c888b7b3/explore?location=34.018933%2C-118.410104%2C10.23>`_

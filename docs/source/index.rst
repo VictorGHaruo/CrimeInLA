@@ -50,7 +50,8 @@ Documentation
     │   ├── main.py                               #Main source code
     │   ├── hypothesis_one/                       #All function from Hypothesis One   
     │   │   ├── data_treatment_h1.py
-    │   │   ├── graphics_h1.py       
+    │   │   ├── graphics_h1.py 
+    │   │   ├── plotgraphics_h1.py       
     │   ├── hypothesis_two/                       #All function from Hypothesis Two 
     │   │   ├── ploter.py
     │   │   ├── categorizer.py
@@ -59,7 +60,8 @@ Documentation
     │   │   ├── data_treatment.py
     ├── tests/                                    #UnitTests
     │   ├── test_data_cleaning.py                 
-    │   ├── test_data_treatment.py    
+    │   ├── test_data_treatment.py 
+    │   ├── test_data_unittests_h1.py   
     │   ├── test_data_unittests_h2.py
     ├── docs/                                     #Documentation
     │   ├── source/                               #.rst files
@@ -68,11 +70,10 @@ Documentation
     │   │   ├── Arquivos .html
     │   ├── Makefile
     ├── data/                                     #All data generated/utilized at project, images and .csv files
-    │   ├── dataset.csv
-    │   ├── cleaned_dataset.csv
+    │   ├── Crime_Data_from_2020_to_Present
     │   ├── final_dataset.csv
     │   ├── test.csv                              #File used at Unit Test
-    │   ├── Lucas/                                #Graphics for Hypothesis One
+    │   ├── Crime_&_Location/                     #Graphics for Hypothesis One
     │   │   ├── Gráficos Hipótese 1
     │   ├── Pandemic/                             #Graphics for Hypothesis Two
     │   │   ├── Gráficos Hipótese 2 
@@ -103,6 +104,22 @@ Finally, in the docs directory, there are .rst and .html files used for developi
 Sphinx. In the root of the project, there is a requirements.txt file that lists the libraries needed for the 
 proper execution of the project.
 
+How to Run
+----------
+
+0. At the end of README it has References, click on "Dataset Download", and the download starts. Also, in and "Shape Map LAPD Limits dataset", download the shapefile. Now put the downloaded .csv and .zip files in `data` folder.
+1. At folder root `CrimeInLA` run `pip install -r requirements.txt` to install the dependencies.
+2. Still in the folder root `CrimeInLA` run `python3 -m src.main`
+3. After ran, do `cd docs && make html` 
+
+.. code-block:: text
+
+    $ pip install -r requirements.txt
+    $ python3 -m src.main
+    $ cd docs && make html
+
+4. To access html page, go to `docs/build/html/index.html`
+
 What Each One Have Done
 ------------------------
 
@@ -116,8 +133,9 @@ the project modules and in the development of Sphinx documentation.
 
 References
 ----------
-* `Dataset Download <https://catalog.data.gov/dataset/crime-data-from-2020-to-present>`_
+* `Dataset Download <https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessTyhttps://catalog.data.gov/dataset/crime-data-from-2020-to-presentpe=DOWNLOAD>`_
 * `Column Description <https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8/about_data>`_
+* `Shape Map LAPD Limits dataset <https://geohub.lacity.org/datasets/031d488e158144d0b3aecaa9c888b7b3/explore?location=34.018933%2C-118.410104%2C10.23>`_
 
 .. toctree::
    :maxdepth: 2
@@ -127,4 +145,3 @@ References
    hypothesis_one
    hypothesis_two
    hypothesis_three
-

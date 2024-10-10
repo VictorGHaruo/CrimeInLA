@@ -46,12 +46,12 @@ def plot_h1(df_Base,df_map):
     df_map['medium']= hp.severity(df_grupos, 'medium' )
     df_map['high'] = hp.severity(df_grupos, 'high' )
     df_map['severity'] = df_map['low'] + 3*df_map['medium'] + 10*df_map['high']
-    df_map['occorrencys'] = hp.sum_columns(df_grupos)
+    df_map['occurrences'] = hp.sum_columns(df_grupos)
 
-    hg.plot_heatmap(df_heatmap,'AREA NAME', 'Crimes_most_occorencys' )
+    hg.plot_heatmap(df_heatmap,'AREA NAME', 'Crimes_most_occurrences' )
 
-    hg.plot_barh(df_map['occorrencys'], df_grupos['AREA NAME'], 'Crimes_Occorrencys')
-    hg.geo_heatmap(df_map,'occorrencys', 'Crimes_Occorrencys_map')
+    hg.plot_barh(df_map['occurrences'], df_grupos['AREA NAME'], 'Crimes_Occurrences')
+    hg.geo_heatmap(df_map,'occurrences', 'Crimes_Occurrences_map')
 
     hg.plot_barh(df_map['severity'], df_grupos['AREA NAME'], 'Areas_severity')
     hg.geo_heatmap(df_map,'severity', 'Areas_severity_map')

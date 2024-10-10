@@ -29,11 +29,11 @@ region is calculated as the number of 'low' severity crimes plus three times the
 the number of 'high' severity crimes.
 
 Columns Used
-------------------
+------------
 * AREA NAME
 * Crm Cd (Crime Code)
 
-.. figure:: ../../data/Crime_&_Location/Crimes_Occurrences_map.png
+.. figure:: ../../data/Crime_&_Location/Crimes_most_occurrences.png
    :width: 600px
    :height: 400px
    :align: center
@@ -42,31 +42,31 @@ Columns Used
    :width: 100%
    :class: borderless
 
-    * - .. figure:: ../../data/Crime_&_Location/Low_Crimes.png
+   * - .. figure:: ../../data/Crime_&_Location/Low_Crimes.png
           :width: 100%
           :align: right
      - .. figure:: ../../data/Crime_&_Location/Low_Crimes_map.png
           :width: 100%
           :align: left
-    * - .. figure:: ../../data/Crime_&_Location/Medium_Crimes.png
+   * - .. figure:: ../../data/Crime_&_Location/Medium_Crimes.png
           :width: 100%
           :align: right
      - .. figure:: ../../data/Crime_&_Location/Medium_Crimes_map.png
           :width: 100%
           :align: left
-    * - .. figure:: ../../data/Crime_&_Location/High_Crimes.png
+   * - .. figure:: ../../data/Crime_&_Location/High_Crimes.png
           :width: 100%
           :align: right
      - .. figure:: ../../data/Crime_&_Location/High_Crimes_map.png
           :width: 100%
           :align: left
-    * - .. figure:: ../../data/Crime_&_Location/Crimes_Occurrences.png
+   * - .. figure:: ../../data/Crime_&_Location/Crimes_Occurrences.png
           :width: 100%
           :align: right
      - .. figure:: ../../data/Crime_&_Location/Crimes_Occurrences_map.png
           :width: 100%
           :align: left
-    * - .. figure:: ../../data/Crime_&_Location/Areas_severity.png
+   * - .. figure:: ../../data/Crime_&_Location/Areas_severity.png
           :width: 100%
           :align: right
      - .. figure:: ../../data/Crime_&_Location/Areas_severity_map.png

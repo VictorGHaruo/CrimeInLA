@@ -38,7 +38,6 @@ Challenges
 
 Documentation
 -------------
-.. code-block:: text
 
     CrimeInLA/
     ├── src/                  
@@ -78,7 +77,7 @@ Documentation
 
 
 Structured
-^^^^^^^^^^
+----------
 
 Initially, the main function executes a general cleaning of the dataset, preparing it for analysis. 
 This involves removing data columns that are not used in any of the three developed hypotheses, with 

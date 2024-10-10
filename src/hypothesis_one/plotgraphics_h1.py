@@ -39,7 +39,7 @@ def plot_h1(df_Base,df_map):
 
 
     df_grupos = hp.groups(df_Base, 'Crm Cd', 'AREA NAME', 0)
-    df_heatmap = hp.groups(df_Base,'Crm Cd', 'AREA NAME', 50000)
+    df_heatmap = hp.groups(df_Base,'Crm Cd', 'AREA NAME', 45000)
 
 
     df_map['low'] = hp.severity(df_grupos, 'low' )

@@ -44,7 +44,8 @@ Documentation
     │   ├── main.py                               #Main source code
     │   ├── hypothesis_one/                       #All function from Hypothesis One   
     │   │   ├── data_treatment_h1.py
-    │   │   ├── graphics_h1.py       
+    │   │   ├── graphics_h1.py  
+    │   │   ├── plotgraphics_h1.py
     │   ├── hypothesis_two/                       #All function from Hypothesis Two 
     │   │   ├── ploter.py
     │   │   ├── categorizer.py
@@ -53,7 +54,8 @@ Documentation
     │   │   ├── data_treatment.py
     ├── tests/                                    #UnitTests
     │   ├── test_data_cleaning.py                 
-    │   ├── test_data_treatment.py    
+    │   ├── test_data_treatment.py 
+    │   ├── test_data_unittests_h1.py
     │   ├── test_data_unittests_h2.py
     ├── docs/                                     #Documentation
     │   ├── source/                               #.rst files
@@ -62,11 +64,10 @@ Documentation
     │   │   ├── Arquivos .html
     │   ├── Makefile
     ├── data/                                     #All data generated/utilized at project, images and .csv files
-    │   ├── dataset.csv
-    │   ├── cleaned_dataset.csv
+    │   ├── Crime_Data_from_2020_to_Present
     │   ├── final_dataset.csv
     │   ├── test.csv                              #File used at Unit Test
-    │   ├── Lucas/                                #Graphics for Hypothesis One
+    │   ├── Crime_&_Location/                     #Graphics for Hypothesis One
     │   │   ├── Gráficos Hipótese 1
     │   ├── Pandemic/                             #Graphics for Hypothesis Two
     │   │   ├── Gráficos Hipótese 2 

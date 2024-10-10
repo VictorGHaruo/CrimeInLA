@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Hypothesis Two : Pandemic &mdash; Crime in LA 2024 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="Crime in LA 2024 documentation" href="#" />
+            <link rel="next" title="Hypothesis Three - Crime &amp; Gender" href="hypothesis_three.html" />
+            <link rel="prev" title="Hypothesis One - Crime &amp; Location" href="hypotesis_one.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="index.html"
+                        title="Wagtail"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/wagtail-logo-new.svg" width="45" height="59" alt="Wagtail"
+                            class="logo-img"
+                        />
+                        Sphinx Wagtail Theme
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_graphics.html">graphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_data_treatment.html">data_treatment_h1 module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h2.html">Pandemic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="categorizer.html">categorizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ploter.html">ploter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h3.html">Crime &amp; Gender</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphic.html">graphic module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hypotesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hypothesis Two : Pandemic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Hypothesis Two : Pandemic</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/hypothesis_two.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/hypothesis_two.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="hypothesis-two-pandemic">
+<h1>Hypothesis Two : Pandemic<a class="headerlink" href="#hypothesis-two-pandemic" title="Link to this heading">¶</a></h1>
+<p>Hypothesis Two addresses time; considering the pandemic occurred in <strong>2020 and 2021</strong>.</p>
+<p><strong>Have the crimes reported during and after the pandemic really changed a lot in Los Angeles?</strong></p>
+<section id="categorizing">
+<h2>Categorizing<a class="headerlink" href="#categorizing" title="Link to this heading">¶</a></h2>
+<p>For the task of categorizing crimes, the categorization provided by the website was used [file: UCR-COMPSTAT062618.pdf].
+However, among the most frequently reported crimes, some of them were not listed there, which necessitated the manual
+classification of a few.</p>
+<p>Thus, the most relevant ones were divided into 11 groups. The remaining ones, due to their lack of similarity
+and in order to avoid data loss, were placed in the 12th group ‘Others’.
+That is, we have:</p>
+<ul class="simple">
+<li><p><a href="#id1"><span class="problematic" id="id2">**</span></a>Assaults, Burglary, Car Theft, Disappearance, Homicides, Others, Personal Theft, Possession of Weapons or Drugs,</p></li>
+</ul>
+<p>Property Theft, Rape, Robbery, Traffic Incidents**</p>
+<p>Furthermore, 2024 had to be viewed differently. Since data was available until part of September, there was a process
+of projecting cases for 2024, using the average of the cases. Therefore, if <em>80 cases</em> occurred, it will be shown as <em>120
+cases</em>, for example.</p>
+<p>Of course, this is not the best method due to the likely increase in the crime rate during the end-of-year period.
+However, for a more superficial analysis, this factor will be suppressed.</p>
+<section id="by-year">
+<h3>By year<a class="headerlink" href="#by-year" title="Link to this heading">¶</a></h3>
+<p>Initially, the analysis is conducted for each year to understand how the distribution of crimes is.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/2020.png"><img alt="_images/2020.png" src="_images/2020.png" style="width: 70%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/2021.png"><img alt="_images/2021.png" src="_images/2021.png" style="width: 70%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/2022.png"><img alt="_images/2022.png" src="_images/2022.png" style="width: 70%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/2023.png"><img alt="_images/2023.png" src="_images/2023.png" style="width: 70%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/2024.png"><img alt="_images/2024.png" src="_images/2024.png" style="width: 70%;" />
+</a>
+</figure>
+<p>In Los Angeles, certain types of crimes stand out, such as <em>Car Theft</em>, <em>Assaults</em>, and <em>Property Theft</em>. However,
+over the 5 years, nothing seems to deviate from the trend; every year follows a nearly identical pattern. Because
+of this, a more detailed analysis was necessary.</p>
+</section>
+<section id="by-category">
+<h3>By Category<a class="headerlink" href="#by-category" title="Link to this heading">¶</a></h3>
+<table class="borderless docutils align-default" style="width: 100%">
+<tbody>
+<tr class="row-odd"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Assaults.png"><img alt="_images/Assaults.png" src="_images/Assaults.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Burglary.png"><img alt="_images/Burglary.png" src="_images/Burglary.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Car_Theft.png"><img alt="_images/Car_Theft.png" src="_images/Car_Theft.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Disappearance.png"><img alt="_images/Disappearance.png" src="_images/Disappearance.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Homicides.png"><img alt="_images/Homicides.png" src="_images/Homicides.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Others.png"><img alt="_images/Others.png" src="_images/Others.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Personal_Theft.png"><img alt="_images/Personal_Theft.png" src="_images/Personal_Theft.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Possession_of_Weapons_or_Drugs.png"><img alt="_images/Possession_of_Weapons_or_Drugs.png" src="_images/Possession_of_Weapons_or_Drugs.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Property_Theft.png"><img alt="_images/Property_Theft.png" src="_images/Property_Theft.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Rape.png"><img alt="_images/Rape.png" src="_images/Rape.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-right">
+<a class="reference internal image-reference" href="_images/Robbery.png"><img alt="_images/Robbery.png" src="_images/Robbery.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-left">
+<a class="reference internal image-reference" href="_images/Traffic_Incidents.png"><img alt="_images/Traffic_Incidents.png" src="_images/Traffic_Incidents.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>It is observed that even using the projection for 2024, there are significantly fewer cases in most categories.</p></li>
+</ul>
+<p>Therefore, we can see some patterns:</p>
+<ol class="arabic simple">
+<li><p><strong>Relatively fewer cases during the pandemic:</strong></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Assaults, Burglary, Disappearance, Others, Personal Theft, Property Theft</strong></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Relatively more cases during the pandemic:</strong></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Possession of Weapons or Drugs</strong></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>It increased in 2021 and 2022, but returned to a decline:</strong></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Homicides, Traffic Incidents</strong></p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><strong>There were practically no changes:</strong></p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Car Theft, Rape, Robbery</strong></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>In this way, we observe that of the 3 most common crimes, 2 of them (<em>Assaults</em> and <em>Personal Theft</em>) were more
+significant after 2021. while <em>Car Theft</em> changed very little.</p>
+<p><strong>Suspicion about Car Theft:</strong> Since it occurs quite frequently, it is a sort of ‘theft culture,’ so the
+pandemic wouldn’t have much effect.</p>
+<p><strong>Suspicion about Assaults e Personal Theft</strong>: Since they are crimes more focused on individuals, isolation
+(even if partial) may have resulted in fewer occurrences. For example, <em>Disappearance</em>’ saw a significant decrease in 2021.</p>
+<p>Thus, it is evident that the pandemic influenced most types of crimes (especially those that require more contact).</p>
+<p>However, we see, for example, cases of <em>Possession of Weapons or Drugs</em>, which experienced a noticeable decline post-pandemic.
+This is not necessarily connected to the dynamics that the pandemic brought; it could have been influenced by external activities,
+such as increased severity in searches and seizures, among other possible influences.</p>
+<p>Therefore, <strong>numerically</strong>, it did change with the pandemic, but can we say it was <strong>due to</strong> the pandemic? <em>One cannot definitively
+assert this!</em> However, it is certain that what the world experienced during the pandemic caused changes, just like the crimes.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="hypotesis_one.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Hypothesis One - Crime &amp; Location
+    </a>
+    <a class="float-right" href="hypothesis_three.html" title="Next">
+        Hypothesis Three - Crime &amp; Gender <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Hypothesis Two : Pandemic</a><ul>
+<li><a class="reference internal" href="#categorizing">Categorizing</a><ul>
+<li><a class="reference internal" href="#by-year">By year</a></li>
+<li><a class="reference internal" href="#by-category">By Category</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2024, Victor Iwamoto, Eric Ribeiro, Lucas Menezes
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=6fefd858"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

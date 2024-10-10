@@ -124,7 +124,7 @@ References
    :caption: Contents:
    
    documentation
-   hypothesis_one
+   hypotesis_one
    hypothesis_two
    hypothesis_three
 

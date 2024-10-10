@@ -16,8 +16,7 @@ Thus, the most relevant ones were divided into 11 groups. The remaining ones, du
 and in order to avoid data loss, were placed in the 12th group 'Others'.
 That is, we have: 
 
-- **Assaults, Burglary, Car Theft, Disappearance, Homicides, Others, Personal Theft, Possession of Weapons or Drugs, 
-Property Theft, Rape, Robbery, Traffic Incidents**
+- **Assaults, Burglary, Car Theft, Disappearance, Homicides, Others, Personal Theft, Possession of Weapons or Drugs, Property Theft, Rape, Robbery, Traffic Incidents**
 
 Furthermore, 2024 had to be viewed differently. Since data was available until part of September, there was a process 
 of projecting cases for 2024, using the average of the cases. Therefore, if *80 cases* occurred, it will be shown as *120 

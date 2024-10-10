@@ -61,6 +61,7 @@
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">graphics_h1 module</a></li>
@@ -80,7 +81,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hypotesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesis_two.html">Hypothesis Two : Pandemic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
 </ul>
@@ -142,44 +143,30 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <dl class="simple">
-<dt>plot_heatmap(df, ylabel, title, gs)</dt><dd><p>Plota um gráfico de calor e salva localmente no formato png.</p>
+<dt>plot_heatmap(df, ylabel, title, gs)</dt><dd><p>Plots a heatmap and saves it locally in PNG format.</p>
 </dd>
-<dt>geo_heatmap(df, intensity, title, gs)</dt><dd><p>Plota um mapa de calor geográfico.</p>
+<dt>geo_heatmap(df, intensity, title, gs)</dt><dd><p>Plots a geographic heatmap.</p>
 </dd>
-<dt>plot_barh(data, ylabel, title, gs)</dt><dd><p>Plota um gráfico de barras horizontal.</p>
+<dt>plot_barh(data, ylabel, title, gs)</dt><dd><p>Plots a horizontal bar chart.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hip_one_graphics</span> <span class="k">as</span> <span class="nn">hg</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hg</span><span class="o">.</span><span class="n">plot_heatmap</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;AREA NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;heatmap&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hg</span><span class="o">.</span><span class="n">geo_heatmap</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;crimes&#39;</span><span class="p">,</span> <span class="s1">&#39;La_map&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hg</span><span class="o">.</span><span class="n">plot_barh</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="s1">&#39;graph&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="author">
-<h2>Author<a class="headerlink" href="#author" title="Link to this heading">¶</a></h2>
-<blockquote>
-<div><p>Lucas Lima &lt;<a class="reference external" href="mailto:luquinhasnm035&#37;&#52;&#48;gmail&#46;com">luquinhasnm035<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-</div></blockquote>
-</section>
-<section id="license">
-<h2>License:<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
-<blockquote>
-<div><p>FGV License</p>
-</div></blockquote>
-</section>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.hypothesis_one.graphics_h1.geo_heatmap">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">geo_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">GeoDataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'alpha':</span> <span class="pre">0.6,</span> <span class="pre">'cmap':</span> <span class="pre">'summer',</span> <span class="pre">'edgecolor':</span> <span class="pre">'black',</span> <span class="pre">'figsize':</span> <span class="pre">(10,</span> <span class="pre">8),</span> <span class="pre">'legend':</span> <span class="pre">True,</span> <span class="pre">'linewidth':</span> <span class="pre">0.5,</span> <span class="pre">'scheme':</span> <span class="pre">'quantiles'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.geo_heatmap" title="Link to this definition">¶</a></dt>
-<dd><p>Gera um mapa de calor geográfico</p>
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">geo_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">GeoDataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'alpha':</span> <span class="pre">0.6,</span> <span class="pre">'cmap':</span> <span class="pre">'Blues',</span> <span class="pre">'edgecolor':</span> <span class="pre">'black',</span> <span class="pre">'face_color':</span> <span class="pre">'#1E182F',</span> <span class="pre">'figsize':</span> <span class="pre">(8,</span> <span class="pre">8),</span> <span class="pre">'legend':</span> <span class="pre">True,</span> <span class="pre">'legend_font_color':</span> <span class="pre">'linen',</span> <span class="pre">'legend_font_size':</span> <span class="pre">12,</span> <span class="pre">'legend_orientation':</span> <span class="pre">'horizontal',</span> <span class="pre">'linewidth':</span> <span class="pre">0.5,</span> <span class="pre">'scheme':</span> <span class="pre">'quantiles',</span> <span class="pre">'xtick_label_color':</span> <span class="pre">'linen',</span> <span class="pre">'xtick_label_size':</span> <span class="pre">15}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.geo_heatmap" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a geographic heatmap.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>gpd.GeoDataFramee</em>) – GeoDataFrame que contém os dados do mapa</p></li>
-<li><p><strong>intensity</strong> (<em>str</em>) – Nome da coluna de df que contém os dados usados como base para o mapa de calor</p></li>
-<li><p><strong>title</strong> (<em>str</em>) – Nome do gráfico</p></li>
-<li><p><strong>gs</strong> (<em>dict</em>) – Configuração gráfica padrão.</p></li>
+<li><p><strong>df</strong> (<em>gpd.GeoDataFrame</em>) – GeoDataFrame containing the data for the map.</p></li>
+<li><p><strong>intensity</strong> (<em>str</em>) – Name of the column in df that contains the data used as the basis for the heatmap.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the plot.</p></li>
+<li><p><strong>gs</strong> (<em>dict</em>) – Default graphic settings.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -193,15 +180,15 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.hypothesis_one.graphics_h1.plot_barh">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">plot_barh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'alpha':</span> <span class="pre">0.8,</span> <span class="pre">'bar_height':</span> <span class="pre">0.7,</span> <span class="pre">'color':</span> <span class="pre">'skyblue',</span> <span class="pre">'edgecolor':</span> <span class="pre">'black',</span> <span class="pre">'face_color':</span> <span class="pre">'#1E182F',</span> <span class="pre">'figsize':</span> <span class="pre">(10,</span> <span class="pre">7),</span> <span class="pre">'font_color':</span> <span class="pre">'white',</span> <span class="pre">'fontsize':</span> <span class="pre">12,</span> <span class="pre">'grid':</span> <span class="pre">True,</span> <span class="pre">'grid_alpha':</span> <span class="pre">0.5,</span> <span class="pre">'grid_axis':</span> <span class="pre">'x',</span> <span class="pre">'linewidth':</span> <span class="pre">1,</span> <span class="pre">'title':</span> <span class="pre">'Título</span> <span class="pre">do</span> <span class="pre">Gráfico',</span> <span class="pre">'xlabel':</span> <span class="pre">None,</span> <span class="pre">'ylabel':</span> <span class="pre">None}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.plot_barh" title="Link to this definition">¶</a></dt>
-<dd><p>Função para plotar gráfico de barras horizontal com configurações personalizadas.</p>
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">plot_barh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'alpha':</span> <span class="pre">0.8,</span> <span class="pre">'bar_height':</span> <span class="pre">0.7,</span> <span class="pre">'color':</span> <span class="pre">'skyblue',</span> <span class="pre">'edgecolor':</span> <span class="pre">'black',</span> <span class="pre">'face_color':</span> <span class="pre">'#1E182F',</span> <span class="pre">'figsize':</span> <span class="pre">(10,</span> <span class="pre">7),</span> <span class="pre">'font_color':</span> <span class="pre">'linen',</span> <span class="pre">'fontsize':</span> <span class="pre">12,</span> <span class="pre">'grid':</span> <span class="pre">True,</span> <span class="pre">'grid_alpha':</span> <span class="pre">0.5,</span> <span class="pre">'grid_axis':</span> <span class="pre">'x',</span> <span class="pre">'linewidth':</span> <span class="pre">1,</span> <span class="pre">'title':</span> <span class="pre">'Título</span> <span class="pre">do</span> <span class="pre">Gráfico',</span> <span class="pre">'xlabel':</span> <span class="pre">None,</span> <span class="pre">'ylabel':</span> <span class="pre">None}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.plot_barh" title="Link to this definition">¶</a></dt>
+<dd><p>Function to plot a horizontal bar chart with custom settings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>pd.Series</em>) – Série com os dados (valores) para o eixo X.</p></li>
-<li><p><strong>xlabel</strong> (<em>pd.Series</em>) – Série com os rótulos do eixo Y.</p></li>
-<li><p><strong>title</strong> (<em>str</em>) – Título do gráfico.</p></li>
-<li><p><strong>gs</strong> (<em>dict</em>) – Dicionário com configurações gráficas opcionais.</p></li>
+<li><p><strong>data</strong> (<em>pd.Series</em>) – Series containing the data (values) for the X-axis.</p></li>
+<li><p><strong>xlabel</strong> (<em>pd.Series</em>) – Series containing the labels for the Y-axis.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the plot.</p></li>
+<li><p><strong>gs</strong> (<em>dict</em>) – Dictionary with optional graphic settings.</p></li>
 </ul>
 </dd>
 </dl>
@@ -209,15 +196,15 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.hypothesis_one.graphics_h1.plot_heatmap">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">plot_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'annot':</span> <span class="pre">True,</span> <span class="pre">'annot_kws':</span> <span class="pre">{'color':</span> <span class="pre">'black',</span> <span class="pre">'size':</span> <span class="pre">10},</span> <span class="pre">'cbar':</span> <span class="pre">True,</span> <span class="pre">'cmap':</span> <span class="pre">'Purples',</span> <span class="pre">'figsize':</span> <span class="pre">(21,</span> <span class="pre">21),</span> <span class="pre">'fmt':</span> <span class="pre">'d',</span> <span class="pre">'linecolor':</span> <span class="pre">'white',</span> <span class="pre">'linewidths':</span> <span class="pre">0.5,</span> <span class="pre">'square':</span> <span class="pre">False,</span> <span class="pre">'vmax':</span> <span class="pre">None,</span> <span class="pre">'vmin':</span> <span class="pre">None,</span> <span class="pre">'xticklabels':</span> <span class="pre">True,</span> <span class="pre">'yticklabels':</span> <span class="pre">True}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.plot_heatmap" title="Link to this definition">¶</a></dt>
-<dd><p>Cria um mapa de calor para a análise dos dados.</p>
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.graphics_h1.</span></span><span class="sig-name descname"><span class="pre">plot_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'annot':</span> <span class="pre">True,</span> <span class="pre">'annot_kws':</span> <span class="pre">{'color':</span> <span class="pre">'gray',</span> <span class="pre">'size':</span> <span class="pre">20},</span> <span class="pre">'background_color':</span> <span class="pre">'#1E182F',</span> <span class="pre">'cbar':</span> <span class="pre">False,</span> <span class="pre">'cmap':</span> <span class="pre">'Blues',</span> <span class="pre">'figsize':</span> <span class="pre">(12,</span> <span class="pre">12),</span> <span class="pre">'fmt':</span> <span class="pre">'d',</span> <span class="pre">'linecolor':</span> <span class="pre">'white',</span> <span class="pre">'linewidths':</span> <span class="pre">0.4,</span> <span class="pre">'square':</span> <span class="pre">False,</span> <span class="pre">'vmax':</span> <span class="pre">None,</span> <span class="pre">'vmin':</span> <span class="pre">None,</span> <span class="pre">'xtick_label_color':</span> <span class="pre">'linen',</span> <span class="pre">'xtick_label_size':</span> <span class="pre">15,</span> <span class="pre">'xticklabels':</span> <span class="pre">True,</span> <span class="pre">'ytick_label_color':</span> <span class="pre">'linen',</span> <span class="pre">'ytick_label_size':</span> <span class="pre">15,</span> <span class="pre">'yticklabels':</span> <span class="pre">True}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.hypothesis_one.graphics_h1.plot_heatmap" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a heatmap for data analysis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>pd.Dataframe</em>) – Dataframe que contém os dados do gráfico.</p></li>
-<li><p><strong>ylabel</strong> (<em>str</em>) – Nome da coluna cujos valores representam o eixo y do gráfico.</p></li>
-<li><p><strong>title</strong> (<em>str</em>) – Título do gráfico.</p></li>
-<li><p><strong>gs</strong> (<em>dict</em>) – Dicionário com configurções básicas do gráfossuem como crime mais ocorrente ico.</p></li>
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – DataFrame containing the data for the plot.</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – Name of the column whose values represent the y-axis of the plot.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the plot.</p></li>
+<li><p><strong>gs</strong> (<em>dict</em>) – Dictionary with basic settings for the plot.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -248,8 +235,6 @@
                             <ul>
 <li><a class="reference internal" href="#">graphics_h1 module</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
-<li><a class="reference internal" href="#author">Author</a></li>
-<li><a class="reference internal" href="#license">License:</a></li>
 <li><a class="reference internal" href="#src.hypothesis_one.graphics_h1.geo_heatmap"><code class="docutils literal notranslate"><span class="pre">geo_heatmap()</span></code></a></li>
 <li><a class="reference internal" href="#src.hypothesis_one.graphics_h1.plot_barh"><code class="docutils literal notranslate"><span class="pre">plot_barh()</span></code></a></li>
 <li><a class="reference internal" href="#src.hypothesis_one.graphics_h1.plot_heatmap"><code class="docutils literal notranslate"><span class="pre">plot_heatmap()</span></code></a></li>

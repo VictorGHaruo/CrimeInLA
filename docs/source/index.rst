@@ -112,7 +112,7 @@ analyses of the hypotheses.
 
 In the graphic design aspect, Victor Iwamoto took charge of creating an aesthetic identity for Sphinx and the graphs, 
 standardizing and harmonizing the visual elements. Overall, there was full participation from the members in organizing 
-the project modules and in the development of Sphinx documentation.
+the project modules and in the development of Sphinx documentation. 
 
 References
 ----------

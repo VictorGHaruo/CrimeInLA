@@ -1,11 +1,11 @@
 """
-Este módulo é responsável por plotar  os gráficos utilizados na análise de dados d hipótese 1.
+This module is responsible for plotting the graphs used in the data analysis of hypothesis 1.
 
 Functions
 ---------
 
 plot_h1(df, df_map)
-    Plota gráficos
+    Plots the graphs
 
 Examples
 --------
@@ -21,16 +21,17 @@ import graphics_h1 as hg
 def plot_h1(df_Base,df_map):
 
     """
-    Plota uma série de gráficos
+    Plots a series of graphs
 
     Parameters
     ----------
     df : pd.DataFrame
-        Base de dados original
+        Original dataset
     df_map : gpd.GeoDataFrame
-        Base de dados utilizada para plotar o mapa de Los Angeles com as divisas das LAPD
+        Dataset used to plot the map of Los Angeles with the LAPD boundaries
 
     """
+
 
     df_grupos = hp.groups(df_Base, 'Crm Cd', 'AREA NAME', 0)
     df_heatmap = hp.groups(df_Base,'Crm Cd', 'AREA NAME', 50000)

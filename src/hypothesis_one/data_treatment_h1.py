@@ -1,21 +1,22 @@
 """
+
 This module is responsible for cleaning the data for analysis in the project.
 
 Functions
 ---------
-groups(df ,xlabel ,ylabel ,restriction ) 
-    Cria um Dataframe com o número de ocorrências de um crime por LAPD.
+groups(df, xlabel, ylabel, restriction)
+    Creates a DataFrame with the number of occurrences of a crime by LAPD.
 
-severity(df_groups , category)
-    Soma colunas cujos crimes possuem mesma gravidade 
+severity(df_groups, category)
+    Sums columns whose crimes have the same severity.
 
 sum_columns(df)
-    Soma as colunas que possuem somente valores numéricos.
+    Sums the columns that contain only numerical values.
 
 Examples
 --------
     >>> import hip_one_data_treatment as hp
-    >>> hp.groups(df,'Crm cd' ,'AREA NAME', 50000)
+    >>> hp.groups(df, 'Crm cd', 'AREA NAME', 50000)
     >>> hp.severity(df, 'low')
     >>> hp.sum_columns(df_Base)
 
@@ -23,8 +24,8 @@ Author
 ------
     Lucas Lima <luquinhasnm035@gmail.com>
 
-License:
---------
+License
+-------
     FGV License
 """
 
@@ -179,25 +180,25 @@ crime_severity = {
 
 def groups(df : pd.DataFrame ,xlabel : str ,ylabel : str , restriction : int) -> pd.DataFrame: 
     """
-    Gera um novo Dataframe com nos dados do agrupamento de duas colunas
+    Generates a new DataFrame with the data from the grouping of two columns.
 
     Parameters
     ----------
-    df : pd.Dataframe
-        Dataframe que contém os dados originais
+    df : pd.DataFrame
+        DataFrame that contains the original data.
     xlabel : str
-        Nome da coluna de df que contém os valores usados como base para agrupar o dataframe
+        Name of the column in df that contains the values used as the basis for grouping the DataFrame.
     ylabel : str
-        Nome da coluna de df que contém os valores que serão contados em cada grupo
+        Name of the column in df that contains the values to be counted in each group.
     restriction : int
-        Valor usado para filtrar colunas (dos dados agrupados) cuja soma dos valores seja menor que o mesmo 
+        Value used to filter columns (from the grouped data) whose sum of values is less than this.
 
     Returns
     -------
-
-    pd.Dataframe
-        Dataframe contendo o número de vezes que um valor de xlabel aparece junto de um ylabel em df
+    pd.DataFrame
+        DataFrame containing the number of times a value of xlabel appears along with a ylabel in df.
     """
+
     try:
         df_grupos = df.groupby(xlabel)[ylabel].value_counts()
     except KeyError:
@@ -217,24 +218,24 @@ def groups(df : pd.DataFrame ,xlabel : str ,ylabel : str , restriction : int) ->
 def severity(df_groups : pd.DataFrame,category : str ,dict: dict = crime_severity) -> Union[pd.Series, None]:
 
     """
-    Soma as colunas cujos crimes apresentam a gravidade passado como argumento
+    Sums the columns whose crimes have the severity specified as an argument.
 
     Parameters
     ----------
-    df_groups : pd.Dataframe
-        Dataframe que contém os dados dos crimes
+    df_groups : pd.DataFrame
+        DataFrame that contains the crime data.
     category : str
-        Gravidade do crime
-    df_severity : str
-    Dicionário que contém a gravidade de cada crime
+        Severity of the crime.
+    dict : dict
+        Dictionary that contains the severity of each crime.
 
     Returns
     -------
     pd.Series
-        Serie contendo a soma das colunas   
-        Return None se a categoria não estiver no dicionário 
-    
+        Series containing the sum of the columns.
+        Returns None if the category is not in the dictionary.
     """
+
 
     group = np.zeros(len(df_groups))
     try: 
@@ -252,19 +253,20 @@ def severity(df_groups : pd.DataFrame,category : str ,dict: dict = crime_severit
 def sum_columns(df : pd.DataFrame) -> Union[pd.Series, None]:
 
     """
-    Soma as colunas de um Dataframe cujo todos os valores são numéricos
+    Sums the columns of a DataFrame where all values are numerical.
 
     Parameters
     ----------
-    df : pd.Dataframe
-        Dataframe que contém os dados.
+    df : pd.DataFrame
+        DataFrame that contains the data.
 
     Returns
     -------
-    pd.Series 
-        Série com a soma de todas as colunas que continham valores numéricos.
-        Return None se nenhuma coluna for somada.
+    pd.Series
+        Series with the sum of all columns that contained numerical values.
+        Returns None if no columns are summed.
     """
+
     try:
         sum = np.zeros(len(df))
     except TypeError:

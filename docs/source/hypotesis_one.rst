@@ -1,43 +1,39 @@
-Hypothesis one - Crime & location
+Hypothesis One - Crime & Location
 =================================
 
-A distribuição de crimes por LAPD é desigual entre as regiões. Há crimes
-que são mais frequentes em determinadas regiões, e há regiões mais 
-"perigosas" que outras.
+The distribution of crimes by LAPD is uneven across regions. Some crimes are more frequent in certain areas, 
+and some regions are more "dangerous" than others.
 
 Method
 ======
 
-Com a hipótese de que a distribuição da ocorrência de crimes em Los Angeles é desigual, 
-bem como a segurança de cada região, foi feita a análise dos dados dos boletins de ocorrência
-emitidos entre 2020 e 2023 nos 21 LAPD.
+With the hypothesis that the occurrence of crimes in Los Angeles is uneven, as well as the safety of each region, an analysis
+was conducted on the crime reports issued between 2020 and 2023 by the 21 LAPD divisions.
 
-Devido a grande variedade de tipos de crimes existentes, os mesmos foram categorizados
-com o objetivo de facilitar a análise e mostragem dos dados. Os crimes foram separados em
-três categorias de acordo com sua gravidade, sendo elas "baixa", que representam crimes pequenos
-como furtos leves, "média", que representam crimes significamente mais graves como grandes furtos e
-agressões, e "alta", que são crimes os com gravidade mais elevada, como os crimes hediondos.
+Due to the wide variety of crime types, they were categorized to facilitate data analysis and visualization. The crimes 
+were separated into three categories based on their severity: "low," representing minor crimes like petty thefts; "medium," 
+representing significantly more serious crimes like grand thefts and assaults; and "high," which includes the most severe 
+crimes, such as heinous crimes.
 
-Para análise e mostragem dos dados, foram utilizados três tipos diferentes de gráficos, gráficos de barras, 
-gráficos de calor e mapas de calor geográfico, bem como uma base de dados extra para plotar o mapa de Los Angeles
-com as fronteiras dos departamentos policiais.
+For data analysis and visualization, three different types of graphs were used: bar charts, heat maps, and geographic heat maps,
+as well as an additional database to plot the map of Los Angeles with the boundaries of the police departments.
 
-A análise considerou apenas aspectos quantitativos em relação as ocorrências, filtrando pelos crimes que ocorreram pelo
-menos uma vez em cada região. Os gráficos "Crimes mais frequentes", e "Crimes po região", mostram os crimes que mais 
-foram relatados e as quantidade total de ocorrências por região.Nota-se que apesar do crime '510' ser o mais frequentes,
-ele não é o que mais ocorre na região "Central", que é a região com maior número de ocorrências. Isso mostra que a distribuição 
-dos crimes pode não ser simplesmente proporcional, podendo estar condicionada a outros fatores, como históricos e geográficos.
+The analysis focused solely on quantitative aspects of the occurrences, filtering for crimes that occurred at least once in each 
+region.The graphs "Crimes_most_occorencys" and "Crimes_Occorrencys" show the crimes that were most reported and the total number of 
+occurrences by region. It is noted that while crime '510' is the most frequent, it does not have the highest occurrence in the 
+"Central" region, which has the highest number of overall occurrences. This indicates that the distribution of crimes may not be 
+simply proportional, potentially conditioned by other factors such as historical and geographical contexts.
 
-Ainda foi feito de uma análise de quais regiões são as mais perigosas com base na categorização dos crimes. O índice de periculosidade
-de uma região é o número de crimes de gravidade 'low' + três vezes o número de crimes de gravidade 'medium' + 10 vezes o número de crimes
-de gravidade 'high'. 
+An analysis was also conducted to identify the most dangerous regions based on the categorization of crimes. The danger index of a 
+region is calculated as the number of 'low' severity crimes plus three times the number of 'medium' severity crimes plus ten times 
+the number of 'high' severity crimes.
 
-Colunas utilizadas
+Columns Used
 ------------------
 * AREA NAME
 * Crm Cd (Crime Code)
 
-.. figure:: ../../data/Crime_&_Location/Crimes_Occorrencys_map.png
+.. figure:: ../../data/Crime_&_Location/Crimes_Occurrences_map.png
    :width: 600px
    :height: 400px
    :align: center
@@ -64,63 +60,54 @@ Colunas utilizadas
      - .. figure:: ../../data/Crime_&_Location/High_Crimes_map.png
           :width: 100%
           :align: left
-    * - .. figure:: ../../data/Crime_&_Location/Crimes_Occorrencys.png
+    * - .. figure:: ../../data/Crime_&_Location/Crimes_Occurrences.png
           :width: 100%
           :align: right
-     - .. figure:: ../../data/Crime_&_Location/Crimes_Occorrencys_map.png
+     - .. figure:: ../../data/Crime_&_Location/Crimes_Occurrences_map.png
           :width: 100%
           :align: left
     * - .. figure:: ../../data/Crime_&_Location/Areas_severity.png
           :width: 100%
           :align: right
-     - .. figure:: ../../data/Crime_&_Location/Areas_sverity_map.png
+     - .. figure:: ../../data/Crime_&_Location/Areas_severity_map.png
           :width: 100%
           :align: left
 
 Analysis
 --------
 
-Crimes mais frequentes (E região mais frequente):
-
+Most Frequent Crimes (and Most Frequent Regions):
 * 510 - 77th Street
 * 330 - Central
 * 354 - 77th Street
 * 624 - Central
 * 740 - Central
 
-Regiões com mais ocorrências (e Crime de maior ocorrência):
-
+Regions with Most Occurrences (and Most Frequent Crime):
 * Central - 330
 * 77th Street - 510
 * Pacific - 510 
 * Southwest - 510 
 * Wilshire - 510
 
-Regiões mais perigosas (e tipo de crime mais ocorrente):
-
+Most Dangerous Regions (and Most Frequent Crime Type):
 * Central - high
-* 77th Street high
+* 77th Street - high
 * Southwest - high
 * Pacific - high
-* Hollywod - high
+* Hollywood - high
 
-As regiões com maior quantidade de ocorrências também são as mais perigosas, e reciprocamente,
-as mais perigosas são as que possuem maior quantidade de crimes de gravidade alta. De mesmo modo,
-os crimes mais frequentes tem maior incidência nas regiões com maior índice de criminalidade, e as regiões
-com maior quantidade de ocorrências, no geral, possuem como crimes mais incidentes os que são mais frequentes no geral.
-Há poucos casos semelhantes ao do crime 330, cujas ocorrências são bem mais frequentes na região "Central",a grande maioria
-dos crimes são distribuidos sem grandes concentrações por região.
+Regions with the highest number of occurrences are also the most dangerous, and conversely, the most dangerous regions have the 
+highest number of serious crimes. Similarly, the most frequent crimes have a higher incidence in regions with higher crime rates, 
+and regions with a higher number of occurrences generally have the most incident crimes that are most frequent overall. There are 
+few cases like crime 330, where occurrences are significantly more frequent in the "Central" region; most crimes are distributed 
+without major concentrations by region.
 
 Conclusion
 ----------
 
-Há certa disparidade na ocorrência de crimes por LADP, mas essa desigualdade não é tão grande. Por mais que existam regiões como 
-"Central" e 77th Street,que possuem bem mais ocorrências que as demais, a áreas tendem a não se distanciar muito da média de ocorrências
-dos crimes como um todo. Além disso, a distribuição de crimes específicos tende a seguir a distribuição das ocorrências gerais, com raras 
-exceções, fazendo com que regiões que normalmente já possuem grande quantidade de ocorrências, também possuam grandes ocorrências de crimes 
-de gravidade elevada,ou seja, a periculosidade de uma região está diretamente ligada com a quantidade de ocorrências dos crimes de maneira geral.
-
-
-
-
-
+There is some disparity in the occurrence of crimes by LAPD, but this inequality is not as significant. Although regions like "Central" 
+and 77th Street have many more occurrences than others, these areas tend to not deviate much from the average occurrences of crimes 
+overall. Moreover, the distribution of specific crimes tends to follow the distribution of general occurrences, with rare exceptions, 
+leading to regions that already have a high number of occurrences also having significant numbers of high-severity crimes. In other words,
+the danger level of a region is directly linked to the overall number of crime occurrences.

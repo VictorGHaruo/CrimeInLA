@@ -98,6 +98,18 @@ Finally, in the docs directory, there are .rst and .html files used for developi
 Sphinx. In the root of the project, there is a requirements.txt file that lists the libraries needed for the 
 proper execution of the project.
 
+How to Run
+----------
+
+1. At folder root `CrimeInLA` run `pip install -r requirements.txt` to install the dependencies.
+2. Still in the folder root `CrimeInLA` run `python3 -m src.main`
+3. After ran, do `cd docs && make html` 
+
+    $ pip install -r requirements.txt
+    $ python3 -m src.main
+    $ cd docs && make html
+
+
 What Each One Have Done
 ------------------------
 

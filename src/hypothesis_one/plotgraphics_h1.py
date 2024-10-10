@@ -15,8 +15,13 @@ Examples
 
 """
 
-import data_treatment_h1 as hp
-import graphics_h1 as hg
+import sys
+import os 
+
+sys.path.append(os.path.abspath('../..'))
+
+import src.hypothesis_one.data_treatment_h1 as hp
+import src.hypothesis_one.graphics_h1 as hg
 
 def plot_h1(df_Base,df_map):
 

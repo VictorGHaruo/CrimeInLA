@@ -90,7 +90,7 @@ def plot_heatmap(df : pd.DataFrame ,ylabel : str ,title : str, gs : dict = heatm
 
     plt.title(title)
 
-    plt.savefig(f"../../data/Crime_&_Location/{title}.png")
+    plt.savefig(f"data/Crime_&_Location/{title}.png")
     plt.close()
     
 
@@ -141,7 +141,7 @@ def geo_heatmap(df: gpd.GeoDataFrame, intensity: str, title: str, gs: dict = gra
     )
 
     plt.title(title, color = 'white')                    
-    plt.savefig(f"../../data/Crime_&_Location/{title}.png")           
+    plt.savefig(f"data/Crime_&_Location/{title}.png")           
     plt.close()
 
 barh_settings = {
@@ -206,5 +206,5 @@ def plot_barh(data: pd.Series, ylabel: pd.Series, title: str, gs: dict = barh_se
         ax.grid(True, axis=gs.get('grid_axis', 'x'), alpha=gs.get('grid_alpha', 0.5))
 
     plt.title(title, color = gs.get('font_color', 'white'))                      
-    plt.savefig(f"../../data/Crime_&_Location/{title}.png")           
+    plt.savefig(f"data/Crime_&_Location/{title}.png")           
     plt.close()

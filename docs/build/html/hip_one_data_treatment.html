@@ -6,13 +6,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>hip_one_data_treatment module &mdash; Crime in LA 2024 documentation</title>
+        <title>data_treatment_h1 module &mdash; Crime in LA 2024 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
             <link rel="top" title="Crime in LA 2024 documentation" href="#" />
+            <link rel="up" title="Crime &amp; Location" href="modules_h1.html" />
+            <link rel="next" title="Pandemic" href="modules_h2.html" />
+            <link rel="prev" title="graphics_h1 module" href="hip_one_graphics.html" />
     </head>
 <body>
     <script type="text/javascript" src="_static/dist/blocking.js"></script>
@@ -56,14 +59,29 @@
 </div><div class="site-toc">
     <nav class="toc mt-3" aria-label="Main menu">
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Crime &amp; Gender: Function Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html">graphic module</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_graphics.html">graphics_h1 module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">data_treatment_h1 module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h2.html">Pandemic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="categorizer.html">categorizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ploter.html">ploter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h3.html">Crime &amp; Gender</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphic.html">graphic module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hypotesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_two.html">Hypothesis Two : Pandemic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
 </ul>
 
@@ -85,7 +103,9 @@
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
-        <li class="breadcrumb-item active" aria-current="page">hip_one_data_treatment module</li>
+            <li class="breadcrumb-item"><a href="documentation.html">Functions Documentation</a></li>
+            <li class="breadcrumb-item"><a href="modules_h1.html">Crime &amp; Location</a></li>
+        <li class="breadcrumb-item active" aria-current="page">data_treatment_h1 module</li>
     </ol>
 </nav>
                     </div>
@@ -116,26 +136,23 @@
                 <div class="row">
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
-    <section id="module-src.hypothesis_one.hip_one_data_treatment">
-<span id="hip-one-data-treatment-module"></span><h1>hip_one_data_treatment module<a class="headerlink" href="#module-src.hypothesis_one.hip_one_data_treatment" title="Link to this heading">¶</a></h1>
+    <section id="module-src.hypothesis_one.data_treatment_h1">
+<span id="data-treatment-h1-module"></span><h1>data_treatment_h1 module<a class="headerlink" href="#module-src.hypothesis_one.data_treatment_h1" title="Link to this heading">¶</a></h1>
 <p>This module is responsible for cleaning the data for analysis in the project.</p>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <dl class="simple">
-<dt>groups(df ,xlabel ,ylabel ,restriction )</dt><dd><p>Cria um Dataframe com o número de ocorrências de um crime por LAPD.</p>
+<dt>groups(df, xlabel, ylabel, restriction)</dt><dd><p>Creates a DataFrame with the number of occurrences of a crime by LAPD.</p>
 </dd>
-<dt>severity_lookup(df ,crm_cd ,colunm1 ,colunm2 )</dt><dd><p>Função auxiliar que retorna a gravidade de um crime.</p>
+<dt>severity(df_groups, category)</dt><dd><p>Sums columns whose crimes have the same severity.</p>
 </dd>
-<dt>severity(df_groups , df_severity ,colunm1 ,colunm2 )</dt><dd><p>Soma colunas cujos crimes possuem mesma gravidade</p>
-</dd>
-<dt>sum_columns(df)</dt><dd><p>Soma as colunas que possuem somente valores numéricos.</p>
+<dt>sum_columns(df)</dt><dd><p>Sums the columns that contain only numerical values.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hip_one_data_treatment</span> <span class="k">as</span> <span class="nn">hp</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">groups</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;Crm cd&#39;</span> <span class="p">,</span><span class="s1">&#39;AREA NAME&#39;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">severity_lookup</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;510&#39;</span><span class="p">,</span><span class="s1">&#39;Crime&#39;</span><span class="p">,</span> <span class="s1">&#39;Gravidade&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">severity</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_severity</span><span class="p">,</span><span class="n">category</span> <span class="p">,</span> <span class="s1">&#39;Crime&#39;</span><span class="p">,</span> <span class="s1">&#39;Gravidade&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">groups</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Crm cd&#39;</span><span class="p">,</span> <span class="s1">&#39;AREA NAME&#39;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">severity</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hp</span><span class="o">.</span><span class="n">sum_columns</span><span class="p">(</span><span class="n">df_Base</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -147,49 +164,48 @@
 </div></blockquote>
 </section>
 <section id="license">
-<h2>License:<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p>FGV License</p>
 </div></blockquote>
 </section>
 <dl class="py function">
-<dt class="sig sig-object py" id="src.hypothesis_one.hip_one_data_treatment.groups">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.hip_one_data_treatment.</span></span><span class="sig-name descname"><span class="pre">groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#src.hypothesis_one.hip_one_data_treatment.groups" title="Link to this definition">¶</a></dt>
-<dd><p>Gera um novo Dataframe com nos dados do agrupamento de duas colunas</p>
+<dt class="sig sig-object py" id="src.hypothesis_one.data_treatment_h1.groups">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.data_treatment_h1.</span></span><span class="sig-name descname"><span class="pre">groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#src.hypothesis_one.data_treatment_h1.groups" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a new DataFrame with the data from the grouping of two columns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>pd.Dataframe</em>) – Dataframe que contém os dados originais</p></li>
-<li><p><strong>xlabel</strong> (<em>str</em>) – Nome da coluna de df que contém os valores usados como base para agrupar o dataframe</p></li>
-<li><p><strong>ylabel</strong> (<em>str</em>) – Nome da coluna de df que contém os valores que serão contados em cada grupo</p></li>
-<li><p><strong>restriction</strong> (<em>int</em>) – Valor usado para filtrar colunas (dos dados agrupados) cuja soma dos valores seja menor que o mesmo</p></li>
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – DataFrame that contains the original data.</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em>) – Name of the column in df that contains the values used as the basis for grouping the DataFrame.</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – Name of the column in df that contains the values to be counted in each group.</p></li>
+<li><p><strong>restriction</strong> (<em>int</em>) – Value used to filter columns (from the grouped data) whose sum of values is less than this.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dataframe contendo o número de vezes que um valor de xlabel aparece junto de um ylabel em df</p>
+<dd class="field-even"><p>DataFrame containing the number of times a value of xlabel appears along with a ylabel in df.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pd.Dataframe</p>
+<dd class="field-odd"><p>pd.DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="src.hypothesis_one.hip_one_data_treatment.severity">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.hip_one_data_treatment.</span></span><span class="sig-name descname"><span class="pre">severity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_severity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colunm1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colunm2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#src.hypothesis_one.hip_one_data_treatment.severity" title="Link to this definition">¶</a></dt>
-<dd><p>Soma as colunas cujos crimes apresentam a gravidade passado como argumento</p>
+<dt class="sig sig-object py" id="src.hypothesis_one.data_treatment_h1.severity">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.data_treatment_h1.</span></span><span class="sig-name descname"><span class="pre">severity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{110:</span> <span class="pre">'medium',</span> <span class="pre">113:</span> <span class="pre">'medium',</span> <span class="pre">121:</span> <span class="pre">'medium',</span> <span class="pre">122:</span> <span class="pre">'high',</span> <span class="pre">210:</span> <span class="pre">'high',</span> <span class="pre">220:</span> <span class="pre">'medium',</span> <span class="pre">230:</span> <span class="pre">'high',</span> <span class="pre">231:</span> <span class="pre">'high',</span> <span class="pre">235:</span> <span class="pre">'high',</span> <span class="pre">236:</span> <span class="pre">'medium',</span> <span class="pre">237:</span> <span class="pre">'high',</span> <span class="pre">250:</span> <span class="pre">'medium',</span> <span class="pre">251:</span> <span class="pre">'high',</span> <span class="pre">310:</span> <span class="pre">'low',</span> <span class="pre">320:</span> <span class="pre">'low',</span> <span class="pre">330:</span> <span class="pre">'low',</span> <span class="pre">331:</span> <span class="pre">'medium',</span> <span class="pre">341:</span> <span class="pre">'medium',</span> <span class="pre">343:</span> <span class="pre">'low',</span> <span class="pre">345:</span> <span class="pre">'medium',</span> <span class="pre">347:</span> <span class="pre">'high',</span> <span class="pre">349:</span> <span class="pre">'high',</span> <span class="pre">350:</span> <span class="pre">'high',</span> <span class="pre">351:</span> <span class="pre">'high',</span> <span class="pre">352:</span> <span class="pre">'high',</span> <span class="pre">353:</span> <span class="pre">'high',</span> <span class="pre">354:</span> <span class="pre">'high',</span> <span class="pre">410:</span> <span class="pre">'high',</span> <span class="pre">420:</span> <span class="pre">'high',</span> <span class="pre">421:</span> <span class="pre">'low',</span> <span class="pre">432:</span> <span class="pre">'high',</span> <span class="pre">433:</span> <span class="pre">'low',</span> <span class="pre">434:</span> <span class="pre">'medium',</span> <span class="pre">435:</span> <span class="pre">'high',</span> <span class="pre">436:</span> <span class="pre">'high',</span> <span class="pre">437:</span> <span class="pre">'high',</span> <span class="pre">438:</span> <span class="pre">'medium',</span> <span class="pre">439:</span> <span class="pre">'medium',</span> <span class="pre">440:</span> <span class="pre">'high',</span> <span class="pre">441:</span> <span class="pre">'medium',</span> <span class="pre">442:</span> <span class="pre">'high',</span> <span class="pre">443:</span> <span class="pre">'high',</span> <span class="pre">444:</span> <span class="pre">'medium',</span> <span class="pre">445:</span> <span class="pre">'low',</span> <span class="pre">446:</span> <span class="pre">'high',</span> <span class="pre">450:</span> <span class="pre">'low',</span> <span class="pre">451:</span> <span class="pre">'medium',</span> <span class="pre">452:</span> <span class="pre">'high',</span> <span class="pre">453:</span> <span class="pre">'high',</span> <span class="pre">470:</span> <span class="pre">'medium',</span> <span class="pre">471:</span> <span class="pre">'high',</span> <span class="pre">473:</span> <span class="pre">'medium',</span> <span class="pre">474:</span> <span class="pre">'medium',</span> <span class="pre">475:</span> <span class="pre">'medium',</span> <span class="pre">480:</span> <span class="pre">'high',</span> <span class="pre">485:</span> <span class="pre">'high',</span> <span class="pre">487:</span> <span class="pre">'high',</span> <span class="pre">510:</span> <span class="pre">'low',</span> <span class="pre">520:</span> <span class="pre">'high',</span> <span class="pre">522:</span> <span class="pre">'high',</span> <span class="pre">622:</span> <span class="pre">'low',</span> <span class="pre">623:</span> <span class="pre">'medium',</span> <span class="pre">624:</span> <span class="pre">'medium',</span> <span class="pre">625:</span> <span class="pre">'high',</span> <span class="pre">626:</span> <span class="pre">'high',</span> <span class="pre">627:</span> <span class="pre">'low',</span> <span class="pre">647:</span> <span class="pre">'high',</span> <span class="pre">648:</span> <span class="pre">'high',</span> <span class="pre">649:</span> <span class="pre">'medium',</span> <span class="pre">651:</span> <span class="pre">'high',</span> <span class="pre">652:</span> <span class="pre">'medium',</span> <span class="pre">653:</span> <span class="pre">'high',</span> <span class="pre">654:</span> <span class="pre">'high',</span> <span class="pre">660:</span> <span class="pre">'medium',</span> <span class="pre">661:</span> <span class="pre">'medium',</span> <span class="pre">662:</span> <span class="pre">'low',</span> <span class="pre">664:</span> <span class="pre">'medium',</span> <span class="pre">666:</span> <span class="pre">'medium',</span> <span class="pre">668:</span> <span class="pre">'low',</span> <span class="pre">670:</span> <span class="pre">'medium',</span> <span class="pre">740:</span> <span class="pre">'high',</span> <span class="pre">745:</span> <span class="pre">'high',</span> <span class="pre">753:</span> <span class="pre">'low',</span> <span class="pre">755:</span> <span class="pre">'high',</span> <span class="pre">756:</span> <span class="pre">'low',</span> <span class="pre">760:</span> <span class="pre">'high',</span> <span class="pre">761:</span> <span class="pre">'high',</span> <span class="pre">762:</span> <span class="pre">'high',</span> <span class="pre">763:</span> <span class="pre">'high',</span> <span class="pre">805:</span> <span class="pre">'medium',</span> <span class="pre">806:</span> <span class="pre">'medium',</span> <span class="pre">810:</span> <span class="pre">'high',</span> <span class="pre">812:</span> <span class="pre">'high',</span> <span class="pre">813:</span> <span class="pre">'medium',</span> <span class="pre">814:</span> <span class="pre">'low',</span> <span class="pre">815:</span> <span class="pre">'low',</span> <span class="pre">820:</span> <span class="pre">'high',</span> <span class="pre">821:</span> <span class="pre">'high',</span> <span class="pre">822:</span> <span class="pre">'medium',</span> <span class="pre">830:</span> <span class="pre">'medium',</span> <span class="pre">840:</span> <span class="pre">'high',</span> <span class="pre">845:</span> <span class="pre">'medium',</span> <span class="pre">850:</span> <span class="pre">'low',</span> <span class="pre">860:</span> <span class="pre">'medium',</span> <span class="pre">865:</span> <span class="pre">'high',</span> <span class="pre">870:</span> <span class="pre">'medium',</span> <span class="pre">880:</span> <span class="pre">'high',</span> <span class="pre">882:</span> <span class="pre">'medium',</span> <span class="pre">884:</span> <span class="pre">'medium',</span> <span class="pre">886:</span> <span class="pre">'medium',</span> <span class="pre">888:</span> <span class="pre">'high',</span> <span class="pre">890:</span> <span class="pre">'low',</span> <span class="pre">900:</span> <span class="pre">'low',</span> <span class="pre">901:</span> <span class="pre">'high',</span> <span class="pre">902:</span> <span class="pre">'low',</span> <span class="pre">903:</span> <span class="pre">'low',</span> <span class="pre">904:</span> <span class="pre">'low',</span> <span class="pre">906:</span> <span class="pre">'low',</span> <span class="pre">910:</span> <span class="pre">'high',</span> <span class="pre">920:</span> <span class="pre">'medium',</span> <span class="pre">921:</span> <span class="pre">'high',</span> <span class="pre">922:</span> <span class="pre">'high',</span> <span class="pre">924:</span> <span class="pre">'high',</span> <span class="pre">926:</span> <span class="pre">'high',</span> <span class="pre">928:</span> <span class="pre">'medium',</span> <span class="pre">930:</span> <span class="pre">'high',</span> <span class="pre">931:</span> <span class="pre">'high',</span> <span class="pre">932:</span> <span class="pre">'medium',</span> <span class="pre">933:</span> <span class="pre">'low',</span> <span class="pre">940:</span> <span class="pre">'medium',</span> <span class="pre">942:</span> <span class="pre">'high',</span> <span class="pre">943:</span> <span class="pre">'medium',</span> <span class="pre">944:</span> <span class="pre">'low',</span> <span class="pre">946:</span> <span class="pre">'high',</span> <span class="pre">948:</span> <span class="pre">'high',</span> <span class="pre">949:</span> <span class="pre">'medium',</span> <span class="pre">950:</span> <span class="pre">'high',</span> <span class="pre">951:</span> <span class="pre">'medium',</span> <span class="pre">954:</span> <span class="pre">'high',</span> <span class="pre">956:</span> <span class="pre">'medium'}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.hypothesis_one.data_treatment_h1.severity" title="Link to this definition">¶</a></dt>
+<dd><p>Sums the columns whose crimes have the severity specified as an argument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df_groups</strong> (<em>pd.Dataframe</em>) – Dataframe que contém os dados dos crimes</p></li>
-<li><p><strong>df_severity</strong> (<em>str</em>) – Dataframe que contém a gravidade de cada crime</p></li>
-<li><p><strong>category</strong> (<em>str</em>) – Gravidade do crime</p></li>
-<li><p><strong>colunm1</strong> (<em>str</em>) – Nome da coluna que contém a descrição de cada crime</p></li>
-<li><p><strong>colunm2</strong> (<em>str</em>) – Nome da coluna que contém a gravidade de cada crime</p></li>
+<li><p><strong>df_groups</strong> (<em>pd.DataFrame</em>) – DataFrame that contains the crime data.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – Severity of the crime.</p></li>
+<li><p><strong>dict</strong> (<em>dict</em>) – Dictionary that contains the severity of each crime.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Serie contendo a soma das colunas</p>
+<dd class="field-even"><p>Series containing the sum of the columns.
+Returns None if the category is not in the dictionary.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>pd.Series</p>
@@ -198,38 +214,16 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="src.hypothesis_one.hip_one_data_treatment.severity_lookup">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.hip_one_data_treatment.</span></span><span class="sig-name descname"><span class="pre">severity_lookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crm_cd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colunm1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colunm2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.hypothesis_one.hip_one_data_treatment.severity_lookup" title="Link to this definition">¶</a></dt>
-<dd><p>Retorna a gravidade de um crime</p>
+<dt class="sig sig-object py" id="src.hypothesis_one.data_treatment_h1.sum_columns">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.data_treatment_h1.</span></span><span class="sig-name descname"><span class="pre">sum_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.hypothesis_one.data_treatment_h1.sum_columns" title="Link to this definition">¶</a></dt>
+<dd><p>Sums the columns of a DataFrame where all values are numerical.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>pd.Dataframe</em>) – Dataframe que contém as informações de gravidade de cada crime</p></li>
-<li><p><strong>crm_cd</strong> (<em>str</em>) – Descrição do crime</p></li>
-<li><p><strong>colunm1</strong> (<em>str</em>) – Nome da coluna que contém a descrição de cada crime</p></li>
-<li><p><strong>colunm2</strong> (<em>str</em>) – Nome da coluna que contém a gravidade de cada crime</p></li>
-</ul>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – DataFrame that contains the data.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Gravidade do crime
-Retorna None se o crm_cd não estiver na base de dados</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str ou None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="src.hypothesis_one.hip_one_data_treatment.sum_columns">
-<span class="sig-prename descclassname"><span class="pre">src.hypothesis_one.hip_one_data_treatment.</span></span><span class="sig-name descname"><span class="pre">sum_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#src.hypothesis_one.hip_one_data_treatment.sum_columns" title="Link to this definition">¶</a></dt>
-<dd><p>Soma as colunas de um Dataframe cujo todos os valores são numéricos</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>df</strong> (<em>pd.Dataframe</em>) – Dataframe que contém os dados.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Série com a soma de todas as colunas que continham valores numéricos.</p>
+<dd class="field-even"><p>Series with the sum of all columns that contained numerical values.
+Returns None if no columns are summed.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>pd.Series</p>
@@ -240,21 +234,27 @@ Retorna None se o crm_cd não estiver na base de dados</p>
 </section>
 
 </main>
-                        
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="hip_one_graphics.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>graphics_h1 module
+    </a>
+    <a class="float-right" href="modules_h2.html" title="Next">
+        Pandemic <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
                     </div>
                     
                     <nav class="col-12 col-lg-3 pb-4">
                         <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
                             <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
                             <ul>
-<li><a class="reference internal" href="#">hip_one_data_treatment module</a><ul>
+<li><a class="reference internal" href="#">data_treatment_h1 module</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#author">Author</a></li>
-<li><a class="reference internal" href="#license">License:</a></li>
-<li><a class="reference internal" href="#src.hypothesis_one.hip_one_data_treatment.groups"><code class="docutils literal notranslate"><span class="pre">groups()</span></code></a></li>
-<li><a class="reference internal" href="#src.hypothesis_one.hip_one_data_treatment.severity"><code class="docutils literal notranslate"><span class="pre">severity()</span></code></a></li>
-<li><a class="reference internal" href="#src.hypothesis_one.hip_one_data_treatment.severity_lookup"><code class="docutils literal notranslate"><span class="pre">severity_lookup()</span></code></a></li>
-<li><a class="reference internal" href="#src.hypothesis_one.hip_one_data_treatment.sum_columns"><code class="docutils literal notranslate"><span class="pre">sum_columns()</span></code></a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#src.hypothesis_one.data_treatment_h1.groups"><code class="docutils literal notranslate"><span class="pre">groups()</span></code></a></li>
+<li><a class="reference internal" href="#src.hypothesis_one.data_treatment_h1.severity"><code class="docutils literal notranslate"><span class="pre">severity()</span></code></a></li>
+<li><a class="reference internal" href="#src.hypothesis_one.data_treatment_h1.sum_columns"><code class="docutils literal notranslate"><span class="pre">sum_columns()</span></code></a></li>
 </ul>
 </li>
 </ul>

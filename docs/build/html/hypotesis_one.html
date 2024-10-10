@@ -6,15 +6,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>Crime &amp; Gender: Function Documentation &mdash; Crime in LA 2024 documentation</title>
+        <title>Hypothesis One - Crime &amp; Location &mdash; Crime in LA 2024 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
             <link rel="top" title="Crime in LA 2024 documentation" href="#" />
-            <link rel="next" title="main module" href="main.html" />
-            <link rel="prev" title="Crime in Los Angeles - Data Analysis" href="index.html" />
+            <link rel="next" title="Hypothesis Two : Pandemic" href="hypothesis_two.html" />
+            <link rel="prev" title="graphic module" href="graphic.html" />
     </head>
 <body>
     <script type="text/javascript" src="_static/dist/blocking.js"></script>
@@ -59,15 +59,28 @@
     <nav class="toc mt-3" aria-label="Main menu">
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Crime &amp; Gender: Function Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html">graphic module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html">hip_one_graphics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html">hip_one_data_treatment module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_graphics.html">graphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_data_treatment.html">data_treatment_h1 module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h2.html">Pandemic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="categorizer.html">categorizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ploter.html">ploter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h3.html">Crime &amp; Gender</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphic.html">graphic module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_two.html">Hypothesis Two : Pandemic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
 </ul>
 
@@ -89,7 +102,7 @@
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Crime &amp; Gender: Function Documentation</li>
+        <li class="breadcrumb-item active" aria-current="page">Hypothesis One - Crime &amp; Location</li>
     </ol>
 </nav>
                     </div>
@@ -101,11 +114,11 @@
                             <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
                             <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
                         </button>
-    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/modules.rst" rel="nofollow">
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/hypotesis_one.rst" rel="nofollow">
         <span class="btn-icon"><span class="fab fa-github"></span></span>
         <span class="btn-text">Edit on GitHub</span>
     </a>
-    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/modules.rst.txt" rel="nofollow">
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/hypotesis_one.rst.txt" rel="nofollow">
         <span class="btn-icon"><span class="fas fa-code"></span></span>
         <span class="btn-text">View source</span>
     </a>
@@ -120,75 +133,102 @@
                 <div class="row">
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
-    <section id="crime-gender-function-documentation">
-<h1>Crime &amp; Gender: Function Documentation<a class="headerlink" href="#crime-gender-function-documentation" title="Link to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="main.html">main module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="main.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#src.main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+    <section id="hypothesis-one-crime-location">
+<h1>Hypothesis One - Crime &amp; Location<a class="headerlink" href="#hypothesis-one-crime-location" title="Link to this heading">¶</a></h1>
+<p>The distribution of crimes by LAPD is uneven across regions. Some crimes are more frequent in certain areas,
+and some regions are more “dangerous” than others.</p>
+<section id="method">
+<h2>Method<a class="headerlink" href="#method" title="Link to this heading">¶</a></h2>
+<p>With the hypothesis that the occurrence of crimes in Los Angeles is uneven, as well as the safety of each region, an analysis
+was conducted on the crime reports issued between 2020 and 2023 by the 21 LAPD divisions.</p>
+<p>Due to the wide variety of crime types, they were categorized to facilitate data analysis and visualization. The crimes
+were separated into three categories based on their severity: “low,” representing minor crimes like petty thefts; “medium,”
+representing significantly more serious crimes like grand thefts and assaults; and “high,” which includes the most severe
+crimes, such as heinous crimes.</p>
+<p>For data analysis and visualization, three different types of graphs were used: bar charts, heat maps, and geographic heat maps,
+as well as an additional database to plot the map of Los Angeles with the boundaries of the police departments.</p>
+<p>The analysis focused solely on quantitative aspects of the occurrences, filtering for crimes that occurred at least once in each
+region.The graphs “Crimes_most_occorencys” and “Crimes_Occorrencys” show the crimes that were most reported and the total number of
+occurrences by region. It is noted that while crime ‘510’ is the most frequent, it does not have the highest occurrence in the
+“Central” region, which has the highest number of overall occurrences. This indicates that the distribution of crimes may not be
+simply proportional, potentially conditioned by other factors such as historical and geographical contexts.</p>
+<p>An analysis was also conducted to identify the most dangerous regions based on the categorization of crimes. The danger index of a
+region is calculated as the number of ‘low’ severity crimes plus three times the number of ‘medium’ severity crimes plus ten times
+the number of ‘high’ severity crimes.</p>
+</section>
+<section id="columns-used">
+<h2>Columns Used<a class="headerlink" href="#columns-used" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>AREA NAME</p></li>
+<li><p>Crm Cd (Crime Code)</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html#src.hypothesis_three.data_cleaning.remove_lines"><code class="docutils literal notranslate"><span class="pre">remove_lines()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html#src.hypothesis_three.data_cleaning.rm_X"><code class="docutils literal notranslate"><span class="pre">rm_X()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="data_treatment.html">data_treatment module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#src.hypothesis_three.data_treatment.aux"><code class="docutils literal notranslate"><span class="pre">aux()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#src.hypothesis_three.data_treatment.order_data"><code class="docutils literal notranslate"><span class="pre">order_data()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html#src.hypothesis_three.data_treatment.ranking"><code class="docutils literal notranslate"><span class="pre">ranking()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="graphic.html">graphic module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html#src.hypothesis_three.graphic.plot_graphic"><code class="docutils literal notranslate"><span class="pre">plot_graphic()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hip_one_graphics.html">hip_one_graphics module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#src.hypothesis_one.hip_one_graphics.geo_heatmap"><code class="docutils literal notranslate"><span class="pre">geo_heatmap()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#src.hypothesis_one.hip_one_graphics.plot_barh"><code class="docutils literal notranslate"><span class="pre">plot_barh()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#src.hypothesis_one.hip_one_graphics.plot_heatmap"><code class="docutils literal notranslate"><span class="pre">plot_heatmap()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_graphics.html#src.hypothesis_one.hip_one_graphics.point_map"><code class="docutils literal notranslate"><span class="pre">point_map()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hip_one_data_treatment.html">hip_one_data_treatment module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#functions">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#author">Author</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#license">License:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#src.hypothesis_one.hip_one_data_treatment.groups"><code class="docutils literal notranslate"><span class="pre">groups()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#src.hypothesis_one.hip_one_data_treatment.severity"><code class="docutils literal notranslate"><span class="pre">severity()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#src.hypothesis_one.hip_one_data_treatment.severity_lookup"><code class="docutils literal notranslate"><span class="pre">severity_lookup()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hip_one_data_treatment.html#src.hypothesis_one.hip_one_data_treatment.sum_columns"><code class="docutils literal notranslate"><span class="pre">sum_columns()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../data/Crime_&amp;_Location/Crimes_Occurrences_map.png"><img alt="../../data/Crime_&amp;_Location/Crimes_Occurrences_map.png" src="../../data/Crime_&amp;_Location/Crimes_Occurrences_map.png" style="width: 600px; height: 400px;" />
+</a>
+</figure>
+</section>
+<section id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">¶</a></h2>
+<p>Most Frequent Crimes (and Most Frequent Regions):
+* 510 - 77th Street
+* 330 - Central
+* 354 - 77th Street
+* 624 - Central
+* 740 - Central</p>
+<p>Regions with Most Occurrences (and Most Frequent Crime):
+* Central - 330
+* 77th Street - 510
+* Pacific - 510
+* Southwest - 510
+* Wilshire - 510</p>
+<p>Most Dangerous Regions (and Most Frequent Crime Type):
+* Central - high
+* 77th Street - high
+* Southwest - high
+* Pacific - high
+* Hollywood - high</p>
+<p>Regions with the highest number of occurrences are also the most dangerous, and conversely, the most dangerous regions have the
+highest number of serious crimes. Similarly, the most frequent crimes have a higher incidence in regions with higher crime rates,
+and regions with a higher number of occurrences generally have the most incident crimes that are most frequent overall. There are
+few cases like crime 330, where occurrences are significantly more frequent in the “Central” region; most crimes are distributed
+without major concentrations by region.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>There is some disparity in the occurrence of crimes by LAPD, but this inequality is not as significant. Although regions like “Central”
+and 77th Street have many more occurrences than others, these areas tend to not deviate much from the average occurrences of crimes
+overall. Moreover, the distribution of specific crimes tends to follow the distribution of general occurrences, with rare exceptions,
+leading to regions that already have a high number of occurrences also having significant numbers of high-severity crimes. In other words,
+the danger level of a region is directly linked to the overall number of crime occurrences.</p>
+</section>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
-    <a class="float-left" href="index.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span>Crime in Los Angeles - Data Analysis
+    <a class="float-left" href="graphic.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>graphic module
     </a>
-    <a class="float-right" href="main.html" title="Next">
-        main module <span aria-hidden="true">&nbsp;→</span>
+    <a class="float-right" href="hypothesis_two.html" title="Next">
+        Hypothesis Two : Pandemic <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">Hypothesis One - Crime &amp; Location</a><ul>
+<li><a class="reference internal" href="#method">Method</a></li>
+<li><a class="reference internal" href="#columns-used">Columns Used</a></li>
+<li><a class="reference internal" href="#analysis">Analysis</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
                     
                 </div>
             </div>

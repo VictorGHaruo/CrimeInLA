@@ -105,10 +105,11 @@ How to Run
 2. Still in the folder root `CrimeInLA` run `python3 -m src.main`
 3. After ran, do `cd docs && make html` 
 
+***
     $ pip install -r requirements.txt
     $ python3 -m src.main
     $ cd docs && make html
-
+***
 
 What Each One Have Done
 ------------------------

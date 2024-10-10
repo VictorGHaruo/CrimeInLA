@@ -13,9 +13,6 @@
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
             <link rel="top" title="Crime in LA 2024 documentation" href="#" />
-            <link rel="up" title="Crime &amp; Gender: Function Documentation" href="modules.html" />
-            <link rel="next" title="data_cleaning module" href="data_cleaning.html" />
-            <link rel="prev" title="Crime &amp; Gender: Function Documentation" href="modules.html" />
     </head>
 <body>
     <script type="text/javascript" src="_static/dist/blocking.js"></script>
@@ -59,14 +56,29 @@
 </div><div class="site-toc">
     <nav class="toc mt-3" aria-label="Main menu">
         <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Crime &amp; Gender: Function Documentation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">main module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="graphic.html">graphic module</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_graphics.html">graphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_data_treatment.html">data_treatment_h1 module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h2.html">Pandemic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="categorizer.html">categorizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ploter.html">ploter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h3.html">Crime &amp; Gender</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphic.html">graphic module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hypotesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_two.html">Hypothesis Two : Pandemic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
 </ul>
 
@@ -88,7 +100,6 @@
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
-            <li class="breadcrumb-item"><a href="modules.html">Crime &amp; Gender: Function Documentation</a></li>
         <li class="breadcrumb-item active" aria-current="page">main module</li>
     </ol>
 </nav>
@@ -123,23 +134,12 @@
     <section id="module-src.main">
 <span id="main-module"></span><h1>main module<a class="headerlink" href="#module-src.main" title="Link to this heading">¶</a></h1>
 <p>This module is responsible for generating and saving graphics for analysis in the project.</p>
-<section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
-<dl class="simple">
-<dt>plot_graphic(graphic_data, graphic_name, gs)</dt><dd><p>Plots the graphic and saves it in the data folder. The “gs” parameter contains default settings
-for the graphic’s appearance.</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">graphic</span> <span class="k">as</span> <span class="nn">gp</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gp</span><span class="o">.</span><span class="n">plot_graphic</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="s2">&quot;My graphic&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 <section id="author">
 <h2>Author<a class="headerlink" href="#author" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p>Victor Iwamoto &lt;<a class="reference external" href="mailto:vitinhogabrielharuo&#37;&#52;&#48;gmail&#46;com">vitinhogabrielharuo<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
+<div><p>Eric Manoel &lt;<a class="reference external" href="mailto:dekribeiro7&#37;&#52;&#48;gmail&#46;com">dekribeiro7<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Lucas Menezes &lt;<a class="reference external" href="mailto:luquinhasnm035&#37;&#52;&#48;gmail&#46;com">luquinhasnm035<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+Victor Iwamoto &lt;<a class="reference external" href="mailto:vitinhogabrielharuo&#37;&#52;&#48;gmail&#46;com">vitinhogabrielharuo<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
 </div></blockquote>
 </section>
 <section id="license">
@@ -156,14 +156,7 @@ for the graphic’s appearance.</p>
 </section>
 
 </main>
-                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
-    <a class="float-left" href="modules.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span>Crime &amp; Gender: Function Documentation
-    </a>
-    <a class="float-right" href="data_cleaning.html" title="Next">
-        data_cleaning module <span aria-hidden="true">&nbsp;→</span>
-    </a>
-</nav>
+                        
                     </div>
                     
                     <nav class="col-12 col-lg-3 pb-4">
@@ -171,7 +164,6 @@ for the graphic’s appearance.</p>
                             <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
                             <ul>
 <li><a class="reference internal" href="#">main module</a><ul>
-<li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#author">Author</a></li>
 <li><a class="reference internal" href="#license">License:</a></li>
 <li><a class="reference internal" href="#src.main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>

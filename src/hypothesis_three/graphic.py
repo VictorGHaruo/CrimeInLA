@@ -55,22 +55,24 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
     """
     fig = plt.figure()
 
-    #Cor do Fundo
+    # Background Color
     fig.patch.set_facecolor(gs["face_color"])
 
-    #Font
+    # Font
     plt.rcParams["font.family"] = "monospace"
 
-    #Eixos
+    # Axis adjust - names
     plt.title(graphic_name, color = "linen")
     plt.xlabel(gs["x_name"], color= "linen")
     plt.ylabel(gs["y_name"], color= "linen")
     plt.yticks(range(-45000,45000, 5000))
     
+    # Axis colors
     ax = plt.gca()
     ax.set_facecolor('#1E182F')
-    ax.tick_params(axis="x", colors="linen")      # x tick labels
+    ax.tick_params(axis="x", colors="linen")     
     ax.tick_params(axis="y", colors="linen")
+
     try:
         graphic_data.plot.bar(color=np.where(graphic_data < 0, gs["f_color"], gs["m_color"]), edgecolor=gs["edge_color"])
     except TypeError:
@@ -85,7 +87,6 @@ def plot_graphic(graphic_data: pd.Series , graphic_name: str, gs: dict = graph_s
         path_save = f"data/gender_and_crime/graphics/{graphic_name}.png"
         plt.savefig(path_save, dpi=gs["dpi"],bbox_inches='tight')
     except FileNotFoundError:
-        #Criar diretório usar os
         exit(f"The directory {path_save} doesn't exist.")
     except PermissionError:
         exit(f"The program doesn't have enough permission to save in the {path_save} folder")

@@ -74,7 +74,6 @@ def ranking(df: pd.DataFrame, gender_group: pd.DataFrame, mode: str, graphic_siz
     
     if mode == "G":
         graphic = order_data(g_list,m_crimes,f_crimes, graphic_size)
-
         return graphic
     elif mode == "M":
         graphic = order_data(m_list,m_crimes,f_crimes, graphic_size)

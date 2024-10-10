@@ -52,13 +52,16 @@ def date_to_year(df: pd.DataFrame, column: str) -> pd.DataFrame:
     0   26      11  2004
     1   10      10  2024
     '''
-    
-    df_new = df.copy()
-    df_new['day'] = df_new[column].str.split('[ /]').str[0].astype(int)
-    df_new['month'] = df_new[column].str.split('[ /]').str[1].astype(int)
-    df_new['year'] = df_new[column].str.split('[ /]').str[2].astype(int)
-    df_new = df_new.drop(column, axis=1)
-    return df_new
+    try:
+        df['day'] = df[column].str.split('[ /]').str[1].astype(int)
+        df['month'] = df[column].str.split('[ /]').str[0].astype(int)
+        df['year'] = df[column].str.split('[ /]').str[2].astype(int)
+        df = df.drop(column, axis=1)
+    except KeyError:
+        raise KeyError("date_to_year : There isn't the passed column")
+    except ValueError:
+        raise ValueError("date_to_year : Don't respect the format the column")
+    return df
 
 crimes = {
     "Homicides": [110, 113],
@@ -104,6 +107,9 @@ def aux_category(cod: int, crimes: dict = crimes) -> str:
     >>> print(crime_type)
     Others
     '''
+    if type(crimes) != dict:
+        raise TypeError("aux_category : There's not a dict in passed argument 'crimes'")
+    
     
     for cate, nums in crimes.items():
         if cod in nums:
@@ -135,7 +141,9 @@ def category (df: pd.DataFrame, column: str) -> pd.DataFrame:
     0      A    100                          Others
     1      B    745  Possession of Weapons or Drugs
     '''
-    
-    df['category'] = df[column].apply(lambda x: aux_category(x))
+    try:
+        df['category'] = df[column].apply(lambda x: aux_category(x))    
+    except KeyError:
+        raise KeyError("category : There isn\'t the passed column")
     return df
     

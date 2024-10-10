@@ -15,8 +15,13 @@ Examples
 
 """
 
-import data_treatment_h1 as hp
-import graphics_h1 as hg
+import sys
+import os 
+
+sys.path.append(os.path.abspath('../..'))
+
+import src.hypothesis_one.data_treatment_h1 as hp
+import src.hypothesis_one.graphics_h1 as hg
 
 def plot_h1(df_Base,df_map):
 
@@ -34,19 +39,19 @@ def plot_h1(df_Base,df_map):
 
 
     df_grupos = hp.groups(df_Base, 'Crm Cd', 'AREA NAME', 0)
-    df_heatmap = hp.groups(df_Base,'Crm Cd', 'AREA NAME', 50000)
+    df_heatmap = hp.groups(df_Base,'Crm Cd', 'AREA NAME', 45000)
 
 
     df_map['low'] = hp.severity(df_grupos, 'low' )
     df_map['medium']= hp.severity(df_grupos, 'medium' )
     df_map['high'] = hp.severity(df_grupos, 'high' )
     df_map['severity'] = df_map['low'] + 3*df_map['medium'] + 10*df_map['high']
-    df_map['occorrencys'] = hp.sum_columns(df_grupos)
+    df_map['occurrences'] = hp.sum_columns(df_grupos)
 
-    hg.plot_heatmap(df_heatmap,'AREA NAME', 'Crimes_most_occorencys' )
+    hg.plot_heatmap(df_heatmap,'AREA NAME', 'Crimes_most_occurrences' )
 
-    hg.plot_barh(df_map['occorrencys'], df_grupos['AREA NAME'], 'Crimes_Occorrencys')
-    hg.geo_heatmap(df_map,'occorrencys', 'Crimes_Occorrencys_map')
+    hg.plot_barh(df_map['occurrences'], df_grupos['AREA NAME'], 'Crimes_Occurrences')
+    hg.geo_heatmap(df_map,'occurrences', 'Crimes_Occurrences_map')
 
     hg.plot_barh(df_map['severity'], df_grupos['AREA NAME'], 'Areas_severity')
     hg.geo_heatmap(df_map,'severity', 'Areas_severity_map')

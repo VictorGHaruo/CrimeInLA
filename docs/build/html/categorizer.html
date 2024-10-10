@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>categorizer module &mdash; Crime in LA 2024 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="Crime in LA 2024 documentation" href="#" />
+            <link rel="up" title="Pandemic" href="modules_h2.html" />
+            <link rel="next" title="ploter module" href="ploter.html" />
+            <link rel="prev" title="Pandemic" href="modules_h2.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <header class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="index.html"
+                        title="Wagtail"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/img/wagtail-logo-new.svg" width="45" height="59" alt="Wagtail"
+                            class="logo-img"
+                        />
+                        Sphinx Wagtail Theme
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Functions Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="modules_h1.html">Crime &amp; Location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_plotgraphics.html">plotgraphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_graphics.html">graphics_h1 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hip_one_data_treatment.html">data_treatment_h1 module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules_h2.html">Pandemic</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">categorizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ploter.html">ploter module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules_h3.html">Crime &amp; Gender</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_cleaning.html">data_cleaning module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_treatment.html">data_treatment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphic.html">graphic module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hypotesis_one.html">Hypothesis One - Crime &amp; Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_two.html">Hypothesis Two : Pandemic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hypothesis_three.html">Hypothesis Three - Crime &amp; Gender</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="index.html">Docs</a></li>
+            <li class="breadcrumb-item"><a href="documentation.html">Functions Documentation</a></li>
+            <li class="breadcrumb-item"><a href="modules_h2.html">Pandemic</a></li>
+        <li class="breadcrumb-item active" aria-current="page">categorizer module</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/categorizer.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/categorizer.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="module-src.hypothesis_two.categorizer">
+<span id="categorizer-module"></span><h1>categorizer module<a class="headerlink" href="#module-src.hypothesis_two.categorizer" title="Link to this heading">¶</a></h1>
+<p>This module is responsible for extra data cleaning for hypothesis 2,
+which involves transforming the date into a year and adding a category
+for each crime.</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>date_to_year(df, column)</dt><dd><p>Takes the column of the dataframe in the format “XX/XX/XXXX 00:00:00 XM”
+and returns only the year.</p>
+</dd>
+<dt>aux_category(code, crimes)</dt><dd><p>Auxiliary function that, given a crime code, returns its category.</p>
+</dd>
+<dt>category(df)</dt><dd><p>Function responsible for adding the ‘category’ column to the dataframe.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">categorizer</span> <span class="k">as</span> <span class="nn">ctg</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df_dated</span> <span class="o">=</span> <span class="n">ctg</span><span class="o">.</span><span class="n">date_to_year</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crime_type</span> <span class="o">=</span> <span class="n">ctg</span><span class="o">.</span><span class="n">aux_category</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">crimes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctg</span><span class="o">.</span><span class="n">category</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.hypothesis_two.categorizer.aux_category">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_two.categorizer.</span></span><span class="sig-name descname"><span class="pre">aux_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crimes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{'Assaults':</span> <span class="pre">[230,</span> <span class="pre">231,</span> <span class="pre">235,</span> <span class="pre">236,</span> <span class="pre">245,</span> <span class="pre">250,</span> <span class="pre">251,</span> <span class="pre">354,</span> <span class="pre">626,</span> <span class="pre">668,</span> <span class="pre">761,</span> <span class="pre">860,</span> <span class="pre">926],</span> <span class="pre">'Burglary':</span> <span class="pre">[310,</span> <span class="pre">320,</span> <span class="pre">812],</span> <span class="pre">'Car</span> <span class="pre">Theft':</span> <span class="pre">[330,</span> <span class="pre">331,</span> <span class="pre">410,</span> <span class="pre">420,</span> <span class="pre">421,</span> <span class="pre">433,</span> <span class="pre">510,</span> <span class="pre">520,</span> <span class="pre">624,</span> <span class="pre">625,</span> <span class="pre">946],</span> <span class="pre">'Disappearance':</span> <span class="pre">[627,</span> <span class="pre">940],</span> <span class="pre">'Homicides':</span> <span class="pre">[110,</span> <span class="pre">113],</span> <span class="pre">'Personal</span> <span class="pre">Theft':</span> <span class="pre">[350,</span> <span class="pre">351,</span> <span class="pre">352,</span> <span class="pre">353,</span> <span class="pre">450,</span> <span class="pre">451,</span> <span class="pre">452,</span> <span class="pre">453],</span> <span class="pre">'Possession</span> <span class="pre">of</span> <span class="pre">Weapons</span> <span class="pre">or</span> <span class="pre">Drugs':</span> <span class="pre">[745,</span> <span class="pre">753,</span> <span class="pre">886],</span> <span class="pre">'Property</span> <span class="pre">Theft':</span> <span class="pre">[341,</span> <span class="pre">343,</span> <span class="pre">345,</span> <span class="pre">440,</span> <span class="pre">441,</span> <span class="pre">442,</span> <span class="pre">443,</span> <span class="pre">444,</span> <span class="pre">445,</span> <span class="pre">470,</span> <span class="pre">471,</span> <span class="pre">472,</span> <span class="pre">473,</span> <span class="pre">474,</span> <span class="pre">475,</span> <span class="pre">480,</span> <span class="pre">485,</span> <span class="pre">487,</span> <span class="pre">491,</span> <span class="pre">649,</span> <span class="pre">662,</span> <span class="pre">740,</span> <span class="pre">946],</span> <span class="pre">'Rape':</span> <span class="pre">[121,</span> <span class="pre">122,</span> <span class="pre">237,</span> <span class="pre">815,</span> <span class="pre">820,</span> <span class="pre">821,</span> <span class="pre">890],</span> <span class="pre">'Robbery':</span> <span class="pre">[210,</span> <span class="pre">220,</span> <span class="pre">850],</span> <span class="pre">'Traffic</span> <span class="pre">Incidents':</span> <span class="pre">[901,</span> <span class="pre">903,</span> <span class="pre">956]}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.hypothesis_two.categorizer.aux_category" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the crime type based on the code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>int</em>) – Crime code.</p></li>
+<li><p><strong>crimes</strong> (<em>dict</em>) – Dictionary with crime categorization (by default, the one provided by the dataset).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Name of the category according to the crime, or ‘Others’ if not in the dictionary.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">crimes</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Robbery&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;Homicide&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crime_type</span> <span class="o">=</span> <span class="n">aux_category</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">crimes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">crime_type</span><span class="p">)</span>
+<span class="go">Robbery</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crime_type</span> <span class="o">=</span> <span class="n">aux_category</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">crimes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">crime_type</span><span class="p">)</span>
+<span class="go">Homicide</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crime_type</span> <span class="o">=</span> <span class="n">aux_category</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">crimes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">crime_type</span><span class="p">)</span>
+<span class="go">Others</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.hypothesis_two.categorizer.category">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_two.categorizer.</span></span><span class="sig-name descname"><span class="pre">category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#src.hypothesis_two.categorizer.category" title="Link to this definition">¶</a></dt>
+<dd><p>Function responsible for creating the ‘category’ column, using the auxiliary function
+aux_category for each row.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – DataFrame with the specified column from which the function will create the new column.</p></li>
+<li><p><strong>column</strong> (<em>str</em>) – Name of the column containing the codes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame with an additional ‘category’ column.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;victim&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span> <span class="s1">&#39;codes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">745</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df_with_category</span> <span class="o">=</span> <span class="n">category</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;codes&#39;</span><span class="p">)</span>
+<span class="go">  victim  codes                        category</span>
+<span class="go">0      A    100                          Others</span>
+<span class="go">1      B    745  Possession of Weapons or Drugs</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.hypothesis_two.categorizer.date_to_year">
+<span class="sig-prename descclassname"><span class="pre">src.hypothesis_two.categorizer.</span></span><span class="sig-name descname"><span class="pre">date_to_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#src.hypothesis_two.categorizer.date_to_year" title="Link to this definition">¶</a></dt>
+<dd><p>Extracts the day, month, and year from a column in the format “dd/mm/yyyy 00:00:00 XM”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – DataFrame with a column in the format “dd/mm/yyyy 00:00:00 XM”.</p></li>
+<li><p><strong>column</strong> (<em>str</em>) – Name of the column with this format.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame without the passed column, but with 3 new ones: ‘day’, ‘month’, and ‘year’.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;26/11/2004 08:00:00 PM&#39;</span><span class="p">,</span> <span class="s1">&#39;10/10/2024 07:00:00 AM&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df_clean</span> <span class="o">=</span> <span class="n">date_to_year</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span>
+<span class="go">    day  month  year</span>
+<span class="go">0   26      11  2004</span>
+<span class="go">1   10      10  2024</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="modules_h2.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span>Pandemic
+    </a>
+    <a class="float-right" href="ploter.html" title="Next">
+        ploter module <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">categorizer module</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#src.hypothesis_two.categorizer.aux_category"><code class="docutils literal notranslate"><span class="pre">aux_category()</span></code></a></li>
+<li><a class="reference internal" href="#src.hypothesis_two.categorizer.category"><code class="docutils literal notranslate"><span class="pre">category()</span></code></a></li>
+<li><a class="reference internal" href="#src.hypothesis_two.categorizer.date_to_year"><code class="docutils literal notranslate"><span class="pre">date_to_year()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/features/">Features</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/about-wagtail/"> About Wagtail</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/services/"> Services</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/blog/"> Blog</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/packages/"> Packages</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://wagtail.org/developers/"> Developers</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                <p style="display: none">
+                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
+                        Wagtail Sphinx Theme 6.3.0
+                    </a>
+                </p>
+            </div>
+            <div class="text-center">
+                    &copy; Copyright 2024, Victor Iwamoto, Eric Ribeiro, Lucas Menezes
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=6fefd858"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>
